@@ -1,0 +1,11 @@
+Modification notice
+
+ru_RU_oo3.aff and ru_RU_oo3.dic are historical encoding-transformed versions
+of ru_RU.aff and ru_RU.dic from Apache OpenOffice Russian Dictionary 0.6.
+ONLYOFFICE stored the original KOI8-R bytes as Windows-1251 characters encoded
+as UTF-8 with a byte-order mark. The _oo3 filenames distinguish these modified
+versions from the current ru_RU payloads.
+
+JetOnlyOffice mirrors the locked ONLYOFFICE Git blobs without further payload
+modification. TRANSFORM.md and verify-transform.ps1 document and verify the
+historical transformation and the relevant dates and source versions.

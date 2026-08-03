@@ -366,3 +366,43 @@ payload. `COPYING_GPLv2` is the complete GPL 2 text, SHA-256
 produces the locked index byte for byte. `COPYING_GPLv2` retains the complete
 GPL 2 text, SHA-256
 `edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6`.
+
+## ru_RU historical OpenOffice 3 payloads
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Original package: Apache OpenOffice Russian Dictionary 0.6, released
+  2009-06-03 at
+  <https://extensions.openoffice.org/en/projectrelease/russian-dictionary-06.html>.
+- Package download: <https://sourceforge.net/projects/aoo-extensions/files/936/9/dict_ru_ru-0.6.oxt/download>.
+- Mirrored OXT: `ru_RU/dict_ru_ru-0.6.oxt`, 526,297 bytes, SHA-256
+  `92dbd078637c087ff2a86bf45fcccf7cfd5a21af0e36767e760a39192a3d5e1a`.
+- Independent Git source: Chromium hunspell dictionaries commit
+  `62e19ad256c9b53f5f7e4c67e2e9779c4cc3ac40`.
+- Reviewed SPDX expression:
+  `LicenseRef-Russian-Dictionaries-Lebedev-1997-2008`.
+
+| Mirrored payload | Locked blob | SHA-256 | OXT source blob | OXT source SHA-256 |
+| --- | --- | --- | --- | --- |
+| `ru_RU/ru_RU_oo3.aff` | `dc7bf1523582bf2960774ec52cfcffcc1e7e5651` | `abedafc2284041150125ae27e268fbe5cf8f43719f510c2becbd7b45d0fa7256` | `cf92c941563e11f06a88cf2790397a70887d3a23` | `f868ff4913af498d342fd9423d5a5295720aa2d66d0d9e7a05fc18fa0eb5e236` |
+| `ru_RU/ru_RU_oo3.dic` | `57e14338dd70a139605712e2b70ca97a3c967051` | `8e2d063a53ee36d7985d8380cc61e13da5d1c6d61e313e60e6a858f2fdfb2a8b` | `aa9ea7a84e95ef2255b6fef13205c87e6796ce05` | `12b781ad1c8305cde4cb737a78d1aafa755fe16e2615c4584c4b14b86e2f02cd` |
+
+The OXT contains `ru_RU.aff` and `ru_RU.dic` as KOI8-R bytes. For each locked
+payload, remove the leading bytes `EF BB BF`, decode the remainder as UTF-8,
+then encode the resulting Unicode characters as Windows-1251. The output is
+byte-identical to the corresponding OXT entry; no newline or content
+normalization is applied. `ru_RU/verify-transform.ps1` verifies the archive,
+source, evidence, and transformation digests offline.
+
+The OXT `LICENSE` is mirrored as
+`LICENSERef-Russian-Dictionaries-Lebedev-1997-2008.txt`, Git blob
+`0ded5e1495072d6a413837128ba1b9d358b92254`, SHA-256
+`6327fa3b084fd87abf8f8779af3a7143da0ffbcc92498dcbd95f1d23b3d82bf7`.
+It grants redistribution and modification under four custom BSD-like
+conditions and is not equivalent to a standard SPDX BSD identifier. Chromium
+`README_ru_RU.txt`, mirrored at Git blob
+`d251d6feabb0c66987f6c629d03465b3282c29f2`, SHA-256
+`ab0a15a2977d17936f8361c0644834aaa286aa0f76ff4a707e9435212b1387b2`,
+independently identifies the OpenOffice source and reproduces the complete
+license and package README. `MODIFICATION_NOTICE.txt` satisfies the license's
+requirement that modified versions be clearly marked.
