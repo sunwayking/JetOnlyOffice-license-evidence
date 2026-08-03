@@ -264,6 +264,49 @@ and thesaurus, while the source tree carries distinct `LICENSE-dict` and
 `LICENSE-thes` files. The reviewed component selects LGPL 3.0 consistently for
 the spelling and hyphenation payloads; no thesaurus payload is mirrored here.
 
+## hr_HR
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Versioned extension: Croatian spelling dictionary, hyphenation rules and
+  thesaurus `2023.09.07`, identifier
+  `org.openoffice.hr.hunspell.dictionaries`.
+- Extension page: <https://extensions.libreoffice.org/en/extensions/show/70053>.
+- Fixed download URL:
+  <https://extensions.libreoffice.org/assets/downloads/5926/1711999223/HR-dict.oxt>.
+- OXT SHA-256:
+  `93a2fbddbad44cefc3ab2684a95320a9b83dfa1c5458e6c33a60809bb9e4e10d`.
+- Original patterns and versioned LPPL grant: `hyphenation/tex-hyphen` commit
+  `bb5190596971b7f40766c0cf55d837b49df0b954`, path
+  `hyph-utf8/tex/generic/hyph-utf8/patterns/tex/hyph-hr.tex`, Git blob
+  `e269419d961ae63dd6b2546b115dfd8dd280be1d`, SHA-256
+  `53fd09c47832a7c35df05090cd3c87d88212d2abc5e2a475f860986392c3ba24`.
+- Reviewed SPDX expression: `LGPL-3.0-only AND LPPL-1.0`.
+
+| Mirrored payload | Locked blob | SHA-256 | OXT source SHA-256 |
+| --- | --- | --- | --- |
+| `hr_HR/hyph_hr_HR.dic` | `8064cb087e5a7c69ae6e8e8f178efb6e32e6b827` | `88667f0810b4f25b72a3fc7f5db7a046981114fa6e0252e099b8286deb4614d6` | `77613ff6e907d2e9ffd93d45bfb16873aa9182e2215df276dbf850d1b0e28f65` |
+
+The OXT member `hyph_hr_HR.dic` is encoded as ISO-8859-2 and starts with
+`ISO8859-2`. Decode it strictly as ISO-8859-2, replace only that first-line
+declaration with `UTF-8`, and encode as BOM-free UTF-8 while preserving LF
+line endings. The result is the locked payload byte for byte.
+
+`README_hyph_hr_HR.txt` is byte-identical between the locked commit and the
+OXT: Git blob `278ce6dbbb17de5384a99a245ec19bcbf6122fa0`, SHA-256
+`2ba15b47f64eba01489d2962a8c04c6e457a33bba418d6384bda30dfe9e23b65`.
+It states that the OpenOffice.org adaptation is licensed under GNU LGPL. The
+OXT's `registration/license_hr.txt`, mirrored as
+`registration-license_hr.txt`, explicitly identifies GNU LGPL Version 3 and
+contains the complete version 3 license text; its SHA-256 is
+`c4071157f028fb936bf974872572806415dabdeabdf4fd357a87847148ce7101`.
+The registration license retains additional third-party terms. The original
+Croatian patterns in `hyph-hr.tex` grant LPPL version 1 or later, and this
+snapshot selects the mirrored LPPL version 1.0 text, SHA-256
+`7790736e17a15a9e30f8adaacb3951c7b3a9e102c2cf48b9ac9a51bdf26297a0`.
+`hr_HR/verify-transform.ps1` verifies the archive members, evidence digests,
+Git blob IDs, license scope text, and deterministic conversion offline.
+
 ## it_IT
 
 - Locked payload source: `ONLYOFFICE/dictionaries` commit

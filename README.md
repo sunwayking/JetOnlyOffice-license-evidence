@@ -20,6 +20,7 @@ own reviewed SPDX expression and evidence locator:
 | `de_CH` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_CH/README_de_DE_frami.txt`, `de_CH/README_hyph_de.txt`, `de_CH/dehyphn.tex` |
 | `de_DE` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_DE/README_de_DE_frami.txt`, `de_DE/README_hyph_de.txt`, `de_DE/dehyphn.tex` |
 | `el_GR` | `LGPL-2.1-or-later` | `el_GR/el_GR_Greek.txt`, `el_GR/hyphen-el.spec`, `el_GR/COPYING_LGPL_v2.1.txt` |
+| `hr_HR` | `LGPL-3.0-only AND LPPL-1.0` | `hr_HR/registration-license_hr.txt`, `hr_HR/README_hyph_hr_HR.txt`, `hr_HR/hyph-hr.tex`, `hr_HR/LPPL-1.0.txt` |
 | `id_ID` | `LGPL-3.0-only` | `id_ID/LICENSE-dict`, `id_ID/README_id_ID.txt`, `id_ID/description.xml` |
 | `it_IT` | `GPL-3.0-only AND LGPL-2.1-or-later` | `it_IT/README_it_IT.txt`, `it_IT/README_hyph_it_IT.txt`, `it_IT/hyph-it.README` |
 | `kk_KZ` | `GPL-2.0-or-later OR LGPL-2.1-or-later OR MPL-1.1` | `kk_KZ/COPYRIGHT` |
@@ -75,6 +76,15 @@ spelling and hyphenation payloads in the dictionary package; the separate
 `LICENSE-dict` and `LICENSE-thes` files distinguish its LGPL 3.0 dictionary
 terms from the unrelated thesaurus terms. This snapshot consistently selects
 the LGPL 3.0 branch also offered for the spelling files.
+
+The `hr_HR` hyphenation payload is reproduced from the versioned Croatian
+LibreOffice extension. Decoding its ISO-8859-2 source, replacing only the
+leading charset declaration, and encoding as BOM-free UTF-8 reproduces the
+locked payload byte for byte. The byte-identical README identifies the
+OpenOffice.org adaptation, while the extension registration license explicitly
+places the product under GNU LGPL version 3. The original Croatian patterns
+separately grant LPPL version 1 or later; this snapshot selects LPPL 1.0 and
+retains both cumulative grants.
 
 The `it_IT` payloads are exact blobs from both the locked dictionaries commit
 and an immutable LibreOffice source commit. That source commit licenses the
