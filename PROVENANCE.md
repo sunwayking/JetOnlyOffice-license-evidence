@@ -72,3 +72,49 @@ It covers George Douros fonts, not Rekha or Padmaa.
   `6f3d1dddcf62d2d452801bd86289ad5826a30d15a502c0825f5c73715372db50`.
 - LGPL 3.0 text: <https://www.gnu.org/licenses/lgpl-3.0.txt>, SHA-256
   `e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118`.
+
+## de_AT, de_CH, and de_DE
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Independent payload and notice source: `LibreOffice/dictionaries` commit
+  `13f714a0e7bbef5f274405240c95f38f417e9324`.
+- Original revision 31 hyphenation source: `hyphenation/tex-hyphen` commit
+  `d69cf46eea4d92f944c764386efdd1b7db7ea331`.
+- LPPL text source: `spdx/license-list-data` commit
+  `c4a7237ec8f4654e867546f9f409749300f1bf4c`.
+- Reviewed SPDX expression: `(GPL-2.0-only OR GPL-3.0-only) AND
+  LGPL-2.0-or-later AND LPPL-1.0`.
+
+The LibreOffice payloads use ISO-8859-1. Decoding that charset, replacing the
+`ISO8859-1` declaration with `UTF-8`, and encoding as BOM-free UTF-8 produces
+the locked payloads byte for byte. No other payload transformation is applied.
+
+| Mirrored payload | Locked blob | SHA-256 | LibreOffice source blob |
+| --- | --- | --- | --- |
+| `de_AT/de_AT.aff` | `31e818e543569c026700d3d63be8343cedf475eb` | `ff26b4ecc487673c232674a8f058cb21875856af83eefa8f784a4145b1a87b9e` | `de/de_AT_frami.aff` at `9be547c4587d5c9dedd606d3c220ead41f786575` |
+| `de_AT/de_AT.dic` | `d3895ad095b71dfcb121dff625d3b7372a2a7f69` | `dfad9c278603d40027c9cea44ed684f00219ff92c6fb6622dfe78ee378a90cee` | `de/de_AT_frami.dic` at `af01bc7fb157197a70a687e02dbd854c760ba198` |
+| `de_AT/hyph_de_AT.dic` | `0931a95a53224888306012158e7b064ec5a78d0e` | `5305d3282cd47eb80e1b0abfc468ea26ae477f71e59092848de74627a2ba16e3` | `de/hyph_de_AT.dic` at `72a97b15b047646df951a30ac81254393fcdfd4b` |
+| `de_CH/de_CH.aff` | `843b8fe028bcef29e96d19adbd2edb1c28787690` | `dc312eb01c299b489aa384af2cc1f521af06be38c950ba7c5e75e549c6fbbc09` | `de/de_CH_frami.aff` at `1bccc156ea871ad7529906f2061f09747769672e` |
+| `de_CH/de_CH.dic` | `06c3adf3959ec27851e50a57b5d5c88adda0bcf9` | `31c7e7696916bf7f0a163a3185df38887d6087883421241777f5704aaf542147` | `de/de_CH_frami.dic` at `ea103c61bf42b5239e9ba824d962c491a5181a00` |
+| `de_CH/hyph_de_CH.dic` | `fb038205c7de24c9e8458c60edee17674610dfab` | `59d570ba7f5f6765ea44430308dda17182dffbdf992fa7d9a89ab7709e591f51` | `de/hyph_de_CH.dic` at `4f1b826088fc2d5c6908d3d9cf7fd5adb066951b` |
+| `de_DE/de_DE.aff` | `cc91ff9a455735ceedf476d499a4d1a9ee7d5c51` | `c7a7d49f73394c8ffd189e9ebec065ad63f6a3feb15417dbf90b2dc68760227e` | `de/de_DE_frami.aff` at `12b9b584bd0806589bb499ae2967ae42b5cf87a6` |
+| `de_DE/de_DE.dic` | `3c54ff093585e1c7aef4b78b40896c8a27e26a48` | `d053e46aab7d36784ed0911ddd8fe1df9836d9d78e3a9c2093145eb5c3c611dd` | `de/de_DE_frami.dic` at `7e08137118abcf3bb746a6c526a476e6a49f4a4e` |
+| `de_DE/hyph_de_DE.dic` | `4efd80cb71e815fa7f043ed3a9aa7fc58f594eef` | `28f351c646894cac0eabd57a86edb718b815705e3fd233df417647415fc49304` | `de/hyph_de_DE.dic` at `100dde01304ae8f071830dcdf352b6642fa92442` |
+
+Each component directory mirrors the same supporting evidence:
+
+| Evidence | Git blob | SHA-256 |
+| --- | --- | --- |
+| `README_de_DE_frami.txt` | `43d6c6c45ea75016b8b912d87a29e99a90a38635` | `c141f4f79c428b7348b5012836f4ad3db4d124f288f15effc22696dc876512ae` |
+| `README_hyph_de.txt` | `8921caef8669a6da5df523fa3491dde3624db5ea` | `be7b3c67a66ea7185a69a3ce3b1e712cd6bb904dce8ac0eecdefd2f1a948baf3` |
+| `COPYING_GPLv2` | `a8cab0356b0b9656dd1a988d524772166016c4ec` | `e7431ac20e815b6797369e802f9e4bb1b0082485060d8b096235f035d741bd89` |
+| `COPYING_GPLv3` | `94a9ed024d3859793618152ea559a168bbcbb5e2` | `8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903` |
+| `COPYING_LGPL_v2.0.txt` | `5bc8fb2c8f757e34a0d8f4644f589d57609e213f` | `b7993225104d90ddd8024fd838faf300bea5e83d91203eab98e29512acebd69c` |
+| `COPYING_LGPL_v2.1.txt` | `4362b49151d7b34ef83b3067a8f9c9f877d72a0e` | `dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551` |
+| `COPYING_OASIS.txt` | `47c1c2bb4384852191c28a47685f2b59e08dadd3` | `2d9d81e88ecd0e837122f4688ca7a6a5bd7bb41bff6e21ff5d4663eb43372db3` |
+| `dehyphn.tex` | `804135789d0c3ec0cc89311b713b5100e526d6ad` | `0bf281fd020e40ec2ae81a6bf819f2451e8cfd027e04f99c101c3da5c97b9300` |
+| `LPPL-1.0.txt` | `1472b174eee6bbf052ec9dbd4cdeef66368bc35a` | `7790736e17a15a9e30f8adaacb3951c7b3a9e102c2cf48b9ac9a51bdf26297a0` |
+
+`COPYING_OASIS.txt` is retained only for complete upstream provenance. Its
+conditional ODF-primary alternative is not part of the selected SPDX branch.
