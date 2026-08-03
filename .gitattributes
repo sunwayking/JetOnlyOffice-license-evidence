@@ -1,5 +1,6 @@
 * -text
 *.ttf binary
+*.html binary
 *.aff whitespace=-trailing-space,-blank-at-eof
 *.dic whitespace=-trailing-space,-blank-at-eof
 *.tex whitespace=-trailing-space,-blank-at-eof
