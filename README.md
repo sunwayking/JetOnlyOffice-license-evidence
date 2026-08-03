@@ -18,6 +18,7 @@ own reviewed SPDX expression and evidence locator:
 | `de_AT` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_AT/README_de_DE_frami.txt`, `de_AT/README_hyph_de.txt`, `de_AT/dehyphn.tex` |
 | `de_CH` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_CH/README_de_DE_frami.txt`, `de_CH/README_hyph_de.txt`, `de_CH/dehyphn.tex` |
 | `de_DE` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_DE/README_de_DE_frami.txt`, `de_DE/README_hyph_de.txt`, `de_DE/dehyphn.tex` |
+| `id_ID` | `LGPL-3.0-only` | `id_ID/LICENSE-dict`, `id_ID/README_id_ID.txt`, `id_ID/description.xml` |
 | `kk_KZ` | `GPL-2.0-or-later OR LGPL-2.1-or-later OR MPL-1.1` | `kk_KZ/COPYRIGHT` |
 | `lt_LT` | `BSD-3-Clause` | `lt_LT/COPYING` |
 | `sl_SI` | `LGPL-2.1-only AND LPPL-1.0` | `sl_SI/Readme_sl_SI.txt`, `sl_SI/README_hyph_sl_SI.txt`, `sl_SI/hyph-sl.tex` |
@@ -53,6 +54,15 @@ Re-encoding the LibreOffice source payloads from ISO-8859-2 to BOM-free UTF-8,
 and updating only their charset declarations, reproduces the locked bytes. The
 reviewed branch combines the explicitly selected LGPL 2.1 spelling and
 adaptation terms with the original hyphenation patterns' LPPL 1.0 terms.
+
+The `id_ID` payloads are exact blobs from the locked dictionaries commit.
+Re-encoding the matching LibreOffice source payloads from ISO-8859-1 to
+BOM-free UTF-8 and updating the affix and hyphenation charset declarations
+reproduces the locked bytes. The extension description explicitly places the
+spelling and hyphenation payloads in the dictionary package; the separate
+`LICENSE-dict` and `LICENSE-thes` files distinguish its LGPL 3.0 dictionary
+terms from the unrelated thesaurus terms. This snapshot consistently selects
+the LGPL 3.0 branch also offered for the spelling files.
 
 `ASC.ttf` is intentionally absent because no redistribution grant was found.
 The `liberation` component is intentionally absent because its 1.07.4 custom

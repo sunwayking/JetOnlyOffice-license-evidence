@@ -192,3 +192,40 @@ The LibreOffice payloads use ISO-8859-2 and LF line endings. Decode that
 charset and encode as BOM-free UTF-8; change `SET ISO8859-2` to `SET UTF-8` in
 the affix file and the leading `ISO8859-2` to `UTF-8` in the hyphenation file.
 These transformations produce the locked payloads byte for byte.
+
+## id_ID
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Independent spelling source: `LibreOffice/dictionaries` commit
+  `75f5dff8c972fff4a32e4ea8434722c277f02a3f`.
+- Hyphenation payload introduction: `LibreOffice/dictionaries` commit
+  `2180c26eabeda8ed3315bc04acd0dd4fc3246736`.
+- Package scope evidence: `LibreOffice/dictionaries` commit
+  `43f9b34b3bf68f252a68827adf59a7f9a4b4d935`.
+- Reviewed SPDX expression: `LGPL-3.0-only`.
+- License evidence: `id_ID/LICENSE-dict`, Git blob
+  `341c30bda4457610db4829294e5d7e526d4c835b`, SHA-256
+  `97628afebc60f026f5c2b25d7491c46a5c4ee61f693e7cfa07fbd2c03605979b`.
+- Package scope evidence: `id_ID/description.xml`, Git blob
+  `2b364549516e5e15e37775fbc72d033cef67f44c`, SHA-256
+  `2b11e5a84b0f48fa79698149bb22827ca72eac4902dfa3390c444c735f10b16f`.
+
+| Mirrored payload | Locked blob | SHA-256 | LibreOffice source blob |
+| --- | --- | --- | --- |
+| `id_ID/id_ID.aff` | `2d3fdf904943531919762db439e144427a045ab4` | `1f7d58cebb3aa37fde368f68d9000c8d1269c7bbcb9cccfc8e90f8c9e8828727` | `id/id_ID.aff` at `6b1b68cdc83246434c2c87358dbd56470c26b17a` |
+| `id_ID/id_ID.dic` | `f806c6a258062ae6a066a97c4174a32c36d4e993` | `968accd36169e7e28d09b267974196db0a2c28049d7237aa55dcf3f2cc657123` | `id/id_ID.dic` at `b7dbe8e70d11262536d56d710a9072b6e186084a` |
+| `id_ID/hyph_id_ID.dic` | `9ca9ab11e082b32f2d6336da019be582ea4aa1fd` | `61f2b88bda4cb0e6848f27ee0850c666c874b78229e48f49ac44ac0a17788cb8` | `id/hyph_id_ID.dic` at `097799942d36cc79dcc377f7b247c6aa191da4ab` |
+
+The LibreOffice payloads declare ISO-8859-1. Decode that charset and encode as
+BOM-free UTF-8; change `SET ISO8859-1` to `SET UTF-8` in the affix file and the
+leading `ISO8859-1` to `UTF-8` in the hyphenation file. This exact historical
+conversion also expands the spelling file's existing UTF-8 smart-quote bytes
+as ISO-8859-1 characters. The resulting bytes reproduce all three locked
+payloads without any further normalization.
+
+`README_id_ID.txt` offers MPL 2.0 or LGPL 3.0 for the spelling payloads. The
+package-level `description.xml` explicitly identifies spelling, hyphenation,
+and thesaurus, while the source tree carries distinct `LICENSE-dict` and
+`LICENSE-thes` files. The reviewed component selects LGPL 3.0 consistently for
+the spelling and hyphenation payloads; no thesaurus payload is mirrored here.
