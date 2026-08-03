@@ -1,0 +1,3 @@
+* -text
+*.ttf binary
+*/LICENSE* whitespace=-trailing-space,-blank-at-eof
