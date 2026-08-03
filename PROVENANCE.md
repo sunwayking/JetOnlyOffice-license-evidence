@@ -229,3 +229,35 @@ package-level `description.xml` explicitly identifies spelling, hyphenation,
 and thesaurus, while the source tree carries distinct `LICENSE-dict` and
 `LICENSE-thes` files. The reviewed component selects LGPL 3.0 consistently for
 the spelling and hyphenation payloads; no thesaurus payload is mirrored here.
+
+## it_IT
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Independent payload and extension-license source: `LibreOffice/dictionaries`
+  commit `43a746e2dcbdea7b89172024a14e6c6f1738c95c`.
+- Original hyphenation-license source: `hyphenation/tex-hyphen` commit
+  `d69cf46eea4d92f944c764386efdd1b7db7ea331`.
+- Reviewed SPDX expression: `GPL-3.0-only AND LGPL-2.1-or-later`.
+
+| Mirrored payload | Locked and LibreOffice blob | SHA-256 |
+| --- | --- | --- |
+| `it_IT/it_IT.aff` | `33baffde761b2e2ca2fe9b3bcf54d928b29f3cd4` | `951afaa19272f13555b8823e8bcf9ccf78f8fe1a07835bdfb912ab3e4d537c2b` |
+| `it_IT/it_IT.dic` | `bb7549a2819ffd722ea7ff3509c56e7316ae84f0` | `bae1e3501dcd2a923669592493b3fde6c02aae7c7aab83bf5e5b49077e73dd64` |
+| `it_IT/hyph_it_IT.dic` | `cc39080221c44fa7844a8bfca13a6f6470212346` | `8c25b6fb62c2fb97586c6f7c6fb48f29f49e90a5c33c09ac9112dba6942b50cd` |
+
+All three payloads are byte-identical across the two immutable repositories;
+no charset or line-ending transformation is applied. `README_it_IT.txt` blob
+`60a8a1600c788661753bb3a810c5100b084dd9eb`, SHA-256
+`34c3e93595cf3cf5f3afc9bc0d98eea12593750383f1e82ed1d3ca29f9681283`,
+licenses the complete extension and explicitly identifies its hyphenation
+function under GPL version 3. The locked `README_hyph_it_IT.txt` blob
+`5965123bc91905894f013323683adbb635f10ff9`, SHA-256
+`e6f356c3c49bc6016b6a635c20b468468eef6d011953a7051bbdfd56e17f0d3b`,
+identifies the original Claudio Beccari patterns and conversion provenance.
+The original `hyph-it.README` blob
+`f6a45094c1338485e53b441d9dbe9e1e6ceb3e69`, SHA-256
+`d9c56c0f7ffe2c94b28d0b50d88150b5f8d214feeec9c42611e0e26a9c5f8a16`,
+grants LGPL version 2.1 or later. The complete LGPL 2.1 text is retained as
+`COPYING_LGPL_v2.1.txt`, SHA-256
+`dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551`.

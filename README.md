@@ -19,6 +19,7 @@ own reviewed SPDX expression and evidence locator:
 | `de_CH` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_CH/README_de_DE_frami.txt`, `de_CH/README_hyph_de.txt`, `de_CH/dehyphn.tex` |
 | `de_DE` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_DE/README_de_DE_frami.txt`, `de_DE/README_hyph_de.txt`, `de_DE/dehyphn.tex` |
 | `id_ID` | `LGPL-3.0-only` | `id_ID/LICENSE-dict`, `id_ID/README_id_ID.txt`, `id_ID/description.xml` |
+| `it_IT` | `GPL-3.0-only AND LGPL-2.1-or-later` | `it_IT/README_it_IT.txt`, `it_IT/README_hyph_it_IT.txt`, `it_IT/hyph-it.README` |
 | `kk_KZ` | `GPL-2.0-or-later OR LGPL-2.1-or-later OR MPL-1.1` | `kk_KZ/COPYRIGHT` |
 | `lt_LT` | `BSD-3-Clause` | `lt_LT/COPYING` |
 | `sl_SI` | `LGPL-2.1-only AND LPPL-1.0` | `sl_SI/Readme_sl_SI.txt`, `sl_SI/README_hyph_sl_SI.txt`, `sl_SI/hyph-sl.tex` |
@@ -63,6 +64,12 @@ spelling and hyphenation payloads in the dictionary package; the separate
 `LICENSE-dict` and `LICENSE-thes` files distinguish its LGPL 3.0 dictionary
 terms from the unrelated thesaurus terms. This snapshot consistently selects
 the LGPL 3.0 branch also offered for the spelling files.
+
+The `it_IT` payloads are exact blobs from both the locked dictionaries commit
+and an immutable LibreOffice source commit. That source commit licenses the
+complete Italian Writing Aids extension, including its hyphenation function,
+under GPL version 3. The original hyphenation notice independently grants LGPL
+version 2.1 or later; both grants are retained in the cumulative expression.
 
 `ASC.ttf` is intentionally absent because no redistribution grant was found.
 The `liberation` component is intentionally absent because its 1.07.4 custom
