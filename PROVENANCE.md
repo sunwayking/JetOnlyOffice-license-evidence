@@ -345,6 +345,45 @@ encode as BOM-free UTF-8 with LF endings. The result reproduces the locked
 payload. `COPYING_GPLv2` is the complete GPL 2 text, SHA-256
 `edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6`.
 
+## pt_BR
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Independent spelling source: `LibreOffice/dictionaries` commit
+  `5cf23af85b47be6e398add826da1a02175be4238`.
+- Independent hyphenation source: Fedora lookaside archive
+  `hyphptBR-213.zip`, SHA-256
+  `ace7c36fc5c9147bc9e782a93c89ffee46dc868486d7991fbf1bcd9c2942fe6a`,
+  SHA-512
+  `dfcd0d1ae9e757891c319a1ff457172b4bf37c84421ab35ecd1d7079fc08b0da18c72c0cd29bffb5b247c652dcf0725de85f5389d7462663032a3965456bdc01`.
+- Versioned package mapping: `microsoft/azurelinux` commit
+  `c5afbc66eece443fccce86bc325859a044eaa72f`, files
+  `specs/h/hyphen-pt/hyphen-pt.spec` and `specs/h/hyphen-pt/sources`.
+- Reviewed SPDX expression: `LGPL-2.1-only AND LGPL-3.0-only`.
+
+| Mirrored payload | Locked and source blob | SHA-256 | Evidence |
+| --- | --- | --- | --- |
+| `pt_BR/pt_BR.aff` | `4664ad6fc893e5683c1140eab8c1e1faeca802d3` | `21d8ad2a769a60e17e2b5ea4ef11d4d593a58b9e2a82d642ef82d6a4c5523865` | `README_pt_BR.TXT`, SHA-256 `f687b608ecf02c57fc37ea81efa9bbdeef023cbf8eafc7a60467ab3417a1f29b` |
+| `pt_BR/pt_BR.dic` | `849c1dcaf873e72e364f7a64b6f1f2a679bbb097` | `a38bfb26b68ece2834e79fe83e48d5792652970ace12db89d1b9674bf9933183` | `README_pt_BR.TXT`, SHA-256 `f687b608ecf02c57fc37ea81efa9bbdeef023cbf8eafc7a60467ab3417a1f29b` |
+| `pt_BR/hyph_pt_BR.dic` | `d86e8a786a451882237aeaca153101dfc58062d9` | `a8eb1a64e4af4649c739211b397fa37b01f9d5774cf558fe3895fc3f26fd33a4` | `README_hyph_pt_BR.txt`, `hyphen-pt.spec` |
+
+The spelling payloads are byte-identical across the locked and independent Git
+commits. The locked `README_pt_BR.TXT` selects LGPL version 2.1 for the spelling
+dictionary. The Fedora `sources` record binds the source ZIP SHA-512, while the
+spec selects `LGPL-3.0-only` for the Brazilian hyphenation source and places
+`README_hyph_pt_BR.txt` plus `hyph_pt_BR.dic` in `%files BR`; its separate
+`GPL-1.0-or-later` term belongs to the Portuguese source packaged outside that
+subpackage.
+
+The ZIP members are the exact parent blobs of LibreOffice commit
+`2bfbaa38e1acd6984a3745c1668ad78096c3fa00`. Decode both as ISO-8859-1 and
+normalize CRLF to LF. For the dictionary, replace only the first-line charset
+declaration `ISO8859-1` with `UTF-8`. For the README, remove the single legacy
+ISO control separator on line 1320. Those operations reproduce the locked Git
+blobs byte for byte. `pt_BR/verify-transform.ps1` verifies the archive, package
+metadata, source members, transformations, evidence digests, and Git blob IDs
+offline. Complete LGPL 2.1 and LGPL 3.0 texts are retained alongside the grants.
+
 ## uk_UA
 
 - Locked payload source: `ONLYOFFICE/dictionaries` commit
