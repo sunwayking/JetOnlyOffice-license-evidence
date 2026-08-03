@@ -119,6 +119,40 @@ Each component directory mirrors the same supporting evidence:
 `COPYING_OASIS.txt` is retained only for complete upstream provenance. Its
 conditional ODF-primary alternative is not part of the selected SPDX branch.
 
+## da_DK
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Independent payload and notice source: `LibreOffice/dictionaries` commit
+  `13f714a0e7bbef5f274405240c95f38f417e9324`.
+- Versioned hyphenation package: Fedora `hyphen-da` commit
+  `28f9812848f20ed71481f228a36308f30e0cf329`; spec blob
+  `9e30528c80291a3a3baeaee34bea4a38cf86d4ca`, SHA-256
+  `4340a04bbb9133797662ab8e3436da94604388de372105eeb0417d493f80af81`.
+- Original pattern source: `hyphenation/tex-hyphen` commit
+  `d69cf46eea4d92f944c764386efdd1b7db7ea331`, path `old/hyphen/dkhyph.tex`,
+  blob `b5c9b4bde8d5ebb51275d6fa17b8c4d2bd677c2b`, SHA-256
+  `be9678c13462d2a277602c48e0a422c0bf3b79e89f601fb20fc2deb1dfbf9363`.
+- Reviewed SPDX expression: `(GPL-2.0-only OR LGPL-2.1-only OR MPL-1.1) AND
+  LGPL-2.1-or-later AND LPPL-1.3c`.
+
+| Mirrored payload | Locked blob | SHA-256 | Independent payload blob |
+| --- | --- | --- | --- |
+| `da_DK/da_DK.aff` | `93fd7893ea6f3740c8a24b5cb6c0c2d6a0eb41a0` | `e8da338675a6ddc85bdcff62e7cbdbb49fe27ce8d89c1f92950f6f9d448996ed` | LibreOffice `da_DK/da_DK.aff` at the same blob |
+| `da_DK/da_DK.dic` | `61de83b2198ec11e4934d8eb8be298014c62db0b` | `dc7fd12bb56ef7a25a33ea7091e0f91617d74e7aee3ae6604fce52cf727f7370` | LibreOffice `da_DK/da_DK.dic` at the same blob |
+| `da_DK/hyph_da_DK.dic` | `58689f169456edd8ad41650b8478c3f602f5cad1` | `98305a04d75e20d4f5482f1ae62df5111ab42296c1030284f6dc7f18990e5d80` | LibreOffice `da_DK/hyph_da_DK.dic` at `77d0666f54cd7ebcfdd259e561a6530a1669ac88` |
+
+The spelling README blob is `69fbc0d0f55c07ee24c4db4b88bad80375666bd9`,
+SHA-256 `c65431a4aa94ed2200139e7f4e8e74e4e5e468366e5fbc7d2af2a32a671db647`.
+The locked hyphenation README blob is `591938cb1fc1f12605ce70a88b6971edca293f6c`,
+SHA-256 `600759b9f68b57a8432b9647bb132bb00a91953cf52b35c5daf65b7956b06501`.
+The Fedora source payload blob is `77d0666f54cd7ebcfdd259e561a6530a1669ac88`,
+SHA-256 `44d0dd1d85bcdb1e63003c97cd08924f10a8a8127380b1b07ac2e75a950c216b`.
+Decoding it as ISO-8859-1, changing the leading encoding declaration to UTF-8,
+and encoding without a BOM reproduces the locked hyphenation payload.
+`dkhyph.tex` explicitly grants LPPL version 1.3 or later; this snapshot selects
+the SPDX `LPPL-1.3c` branch and retains the canonical `LPPL-1.3c.txt` text.
+
 ## kk_KZ
 
 - Locked payload source: `ONLYOFFICE/dictionaries` commit

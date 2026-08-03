@@ -14,6 +14,7 @@ own reviewed SPDX expression and evidence locator:
 | `fonts-gujr-extra` | `GPL-2.0-or-later` | `fonts-gujr-extra/LICENSE` |
 | `kacst` | `GPL-2.0-only` | `kacst/LICENSE` |
 | `kacst-one` | `GPL-2.0-only` | `kacst-one/LICENSE` |
+| `da_DK` | `(GPL-2.0-only OR LGPL-2.1-only OR MPL-1.1) AND LGPL-2.1-or-later AND LPPL-1.3c` | `da_DK/da_DK_Danish.txt`, `da_DK/README_hyph_da_DK.txt`, `da_DK/hyphen-da.spec`, `da_DK/dkhyph.tex` |
 | `en_GB` | `LGPL-3.0-only AND LicenseRef-Hyphen-en-GB-2011-10-07` | `en_GB/lgpl-3.0.txt`, `en_GB/README_hyph_en_GB.txt` |
 | `de_AT` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_AT/README_de_DE_frami.txt`, `de_AT/README_hyph_de.txt`, `de_AT/dehyphn.tex` |
 | `de_CH` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_CH/README_de_DE_frami.txt`, `de_CH/README_hyph_de.txt`, `de_CH/dehyphn.tex` |
@@ -40,6 +41,11 @@ The three German components are also exact blobs from the locked dictionaries
 commit. Their LibreOffice source payloads are reproducibly converted from
 ISO-8859-1 to BOM-free UTF-8. The mirrored notices and original TeX source bind
 the spelling, hyphenation adaptation, and LPPL terms to those payloads.
+
+The `da_DK` spelling payload is an exact LibreOffice blob with an explicit
+GPL 2.0, LGPL 2.1, and MPL 1.1 choice. Its hyphenation payload is reproduced
+from the Fedora `hyphen-da` source and is covered by the versioned LGPL 2.1-or-
+later adaptation grant plus the original LPPL 1.3c patterns.
 
 The `kk_KZ` payloads are exact blobs from the locked dictionaries commit. The
 Debian copyright record from the independently versioned `hunspell-kk` source

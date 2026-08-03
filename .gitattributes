@@ -4,6 +4,7 @@
 *.dat whitespace=-trailing-space,-blank-at-eof
 *.dic whitespace=-trailing-space,-blank-at-eof
 *.idx whitespace=-trailing-space,-blank-at-eof
+*.patch whitespace=-trailing-space,-blank-at-eof
 *.pl whitespace=-trailing-space,-blank-at-eof
 *.source whitespace=-trailing-space,-blank-at-eof
 *.tex whitespace=-trailing-space,-blank-at-eof
