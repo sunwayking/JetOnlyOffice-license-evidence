@@ -118,3 +118,24 @@ Each component directory mirrors the same supporting evidence:
 
 `COPYING_OASIS.txt` is retained only for complete upstream provenance. Its
 conditional ODF-primary alternative is not part of the selected SPDX branch.
+
+## kk_KZ
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Independent package source: `deepin-community/hunspell-kk` commit
+  `16e05bfb723b0290a3f0d67d4909fc5f948f58e9`.
+- Debian copyright blob: `059048c620f63f8b4cdb5309f6f10fd09424b8af`,
+  SHA-256 `005abba37d3fd43f3703ecc3da1820a5f401832d32d476cfdf41de4a7ec2c027`.
+- Reviewed SPDX expression:
+  `GPL-2.0-or-later OR LGPL-2.1-or-later OR MPL-1.1`.
+
+| Mirrored payload | Locked blob | SHA-256 | Independent source blob |
+| --- | --- | --- | --- |
+| `kk_KZ/kk_KZ.aff` | `190f9e89fa8256751abfb497fa7af70f89bfa9b5` | `36a468797842522027b6e12ae8aacd26ae53288322c43a84af8b205b8a06eb6b` | `a93feb7e56283fb06a404ec69940e074c03ab4f0` |
+| `kk_KZ/kk_KZ.dic` | `4118be1ac4d0551e47f285e7da414ecaaac4f4c0` | `3e51ac567453c603312de1ec85f0637a723bed6e597ea1f6c8248e33eddd242c` | `3e0b7d56623787fed2637c73dfa55eefdcb44001` |
+
+The independent source blobs use a UTF-8 BOM and CRLF line endings. Removing
+the BOM and normalizing CRLF to LF yields the locked payloads byte for byte;
+the evidence repository retains the locked ONLYOFFICE bytes without applying
+checkout-time conversion.

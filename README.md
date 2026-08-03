@@ -18,6 +18,7 @@ own reviewed SPDX expression and evidence locator:
 | `de_AT` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_AT/README_de_DE_frami.txt`, `de_AT/README_hyph_de.txt`, `de_AT/dehyphn.tex` |
 | `de_CH` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_CH/README_de_DE_frami.txt`, `de_CH/README_hyph_de.txt`, `de_CH/dehyphn.tex` |
 | `de_DE` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_DE/README_de_DE_frami.txt`, `de_DE/README_hyph_de.txt`, `de_DE/dehyphn.tex` |
+| `kk_KZ` | `GPL-2.0-or-later OR LGPL-2.1-or-later OR MPL-1.1` | `kk_KZ/COPYRIGHT` |
 
 The `LICENSE.GPL-2.0` copies supplement the Debian copyright mappings with the
 complete GPL version 2 text. Supplementary `COPYRIGHT` files retain the
@@ -32,6 +33,12 @@ The three German components are also exact blobs from the locked dictionaries
 commit. Their LibreOffice source payloads are reproducibly converted from
 ISO-8859-1 to BOM-free UTF-8. The mirrored notices and original TeX source bind
 the spelling, hyphenation adaptation, and LPPL terms to those payloads.
+
+The `kk_KZ` payloads are exact blobs from the locked dictionaries commit. The
+Debian copyright record from the independently versioned `hunspell-kk` source
+package establishes that GPL 2 or later, LGPL 2.1 or later, and MPL 1.1 are
+alternative license choices. Removing the UTF-8 BOM and normalizing CRLF to LF
+reproduces the locked payloads from that source commit byte for byte.
 
 `ASC.ttf` is intentionally absent because no redistribution grant was found.
 The `liberation` component is intentionally absent because its 1.07.4 custom
