@@ -1,11 +1,19 @@
 Modification notice
 
+The current payloads preserve upstream LibreOffice modifications. Its
+README_ru_RU.txt marks the 2012-08-24 addition of a TRY line to ru_RU.aff.
+LibreOffice commit 30dd499a102c930b6386d9b0b44ed13e9d4cf8d2 marks the
+2021-07-25 removal of 14 spurious CR bytes from ru_RU.dic. The hyphenation
+payload and all three current payload bytes are mirrored without additional
+JetOnlyOffice changes.
+
 ru_RU_oo3.aff and ru_RU_oo3.dic are historical encoding-transformed versions
 of ru_RU.aff and ru_RU.dic from Apache OpenOffice Russian Dictionary 0.6.
 ONLYOFFICE stored the original KOI8-R bytes as Windows-1251 characters encoded
 as UTF-8 with a byte-order mark. The _oo3 filenames distinguish these modified
 versions from the current ru_RU payloads.
 
-JetOnlyOffice mirrors the locked ONLYOFFICE Git blobs without further payload
-modification. TRANSFORM.md and verify-transform.ps1 document and verify the
-historical transformation and the relevant dates and source versions.
+JetOnlyOffice mirrors all five locked ONLYOFFICE Git blobs without further
+payload modification. TRANSFORM.md and verify-transform.ps1 document and
+verify the exact current sources, historical transformation, dates, and
+source versions.

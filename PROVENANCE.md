@@ -367,6 +367,49 @@ produces the locked index byte for byte. `COPYING_GPLv2` retains the complete
 GPL 2 text, SHA-256
 `edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6`.
 
+## ru_RU current LibreOffice payloads
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Independent payload and license source: `LibreOffice/dictionaries` commit
+  `30dd499a102c930b6386d9b0b44ed13e9d4cf8d2`.
+- Independent path-license mapping: Debian `libreoffice-dictionaries
+  1:7.2.0-1`.
+- PGP-signed Debian source record:
+  `ru_RU/libreoffice-dictionaries_7.2.0-1.dsc`, Git blob
+  `65d651cc5ef1b93b95f229667f4e27df82aba0f9`, SHA-256
+  `e4d1ac6f71bfe219b8c26bf5719ad6adcdbf369d764ea90972015f7b7ef40e73`.
+- Debian packaging archive:
+  `ru_RU/libreoffice-dictionaries_7.2.0-1.debian.tar.xz`, Git blob
+  `9df739017833abdd28fafd15c1ca8e36ce84056e`, SHA-256
+  `884d43ec0c208d40a8e323e82b05352ec99acb42031303cffba1620ccadfa8cc`.
+- Debian copyright mapping: `ru_RU/COPYRIGHT`, Git blob
+  `59b861c1529a9292a1edb5ac690d784b15fe0093`, SHA-256
+  `15092e924d00de1c127e75f08089fac9579808d47ccd64dd661f5fac428fd4ab`.
+- Reviewed SPDX expression:
+  `LicenseRef-Russian-Dictionaries-Lebedev-1997-2008`.
+
+| Mirrored payload | Locked and LibreOffice blob | SHA-256 |
+| --- | --- | --- |
+| `ru_RU/hyph_ru_RU.dic` | `1d82ffc3b4044e8d587751a368a4850c9cc6bad7` | `e9a6ae92765fc7e63d879f2ccf3f50f2b95bc8ed7618a6f31c34ce7d39844c83` |
+| `ru_RU/ru_RU.aff` | `b6bef6d261914c579542b59c89dd03b83ae5927c` | `38ce7d4af78e211e9bafe4bf7e3d6a2c420591136cb738ec6648f8fdf6524cd7` |
+| `ru_RU/ru_RU.dic` | `e5cfd3614c2303be12da481198b5d914e592da9c` | `f6047416a0204adbecf3a451b874ec8a97ee37e2cbc714466ef04d8dbcc0d6fc` |
+
+All three payloads are byte-identical across the locked and independent Git
+commits; no charset or line-ending transformation is applied. LibreOffice
+`README_ru_RU.txt`, mirrored as `ru_RU/README_ru_RU.libreoffice.txt`, has Git
+blob `4620b48a8a37d8f3f29dda667ea0aacc992bd26c` and SHA-256
+`262af2f6ad70a61e5ee1332ff44fa8ee50edca819cf33207d8ad6ba6a0c9be52`.
+It retains the complete custom terms and marks the 2012 `ru_RU.aff` change.
+The exact `ru_RU.dic` source commit marks its 2021 removal of 14 spurious CR
+bytes. Debian's copyright file explicitly maps `dictionaries/ru_RU/*` to
+`custom-bsd-4-clauses`, including the three mirrored payload paths. The Debian
+record corroborates license scope only; byte equality is established against
+the immutable LibreOffice Git commit. The verifier checks that the archive
+digest is listed in the `.dsc` and that its `debian/copyright` entry is
+byte-identical to the mirrored `COPYRIGHT`. The `.dsc` signature bytes are
+retained, but signer trust is not established by this component verifier.
+
 ## ru_RU historical OpenOffice 3 payloads
 
 - Locked payload source: `ONLYOFFICE/dictionaries` commit

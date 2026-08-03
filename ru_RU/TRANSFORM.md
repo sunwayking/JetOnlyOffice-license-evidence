@@ -1,4 +1,12 @@
-# ru_RU_oo3 Reproduction
+# ru_RU Payload Reproduction
+
+## Current payloads
+
+`hyph_ru_RU.dic`, `ru_RU.aff`, and `ru_RU.dic` are byte-identical Git blobs
+in the locked ONLYOFFICE commit and LibreOffice commit
+`30dd499a102c930b6386d9b0b44ed13e9d4cf8d2`. No transform is applied.
+
+## Historical OpenOffice 3 payloads
 
 The locked ONLYOFFICE files are historical encoding-transformed copies of the
 KOI8-R payloads in Apache OpenOffice Russian Dictionary 0.6.
@@ -21,5 +29,6 @@ Run the offline verifier from this directory:
 pwsh -NoProfile -File .\verify-transform.ps1
 ```
 
-The verifier checks the OXT, license, Chromium README, both source entries,
-both locked payloads, and the byte-for-byte inverse transformation.
+The verifier checks all five payloads and their Git blob IDs, current license
+evidence, extraction of Debian `debian/copyright`, the OXT, both historical
+source entries, and the byte-for-byte inverse transformation.
