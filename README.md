@@ -19,6 +19,8 @@ own reviewed SPDX expression and evidence locator:
 | `de_CH` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_CH/README_de_DE_frami.txt`, `de_CH/README_hyph_de.txt`, `de_CH/dehyphn.tex` |
 | `de_DE` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_DE/README_de_DE_frami.txt`, `de_DE/README_hyph_de.txt`, `de_DE/dehyphn.tex` |
 | `kk_KZ` | `GPL-2.0-or-later OR LGPL-2.1-or-later OR MPL-1.1` | `kk_KZ/COPYRIGHT` |
+| `lt_LT` | `BSD-3-Clause` | `lt_LT/COPYING` |
+| `sl_SI` | `LGPL-2.1-only AND LPPL-1.0` | `sl_SI/Readme_sl_SI.txt`, `sl_SI/README_hyph_sl_SI.txt`, `sl_SI/hyph-sl.tex` |
 
 The `LICENSE.GPL-2.0` copies supplement the Debian copyright mappings with the
 complete GPL version 2 text. Supplementary `COPYRIGHT` files retain the
@@ -39,6 +41,18 @@ Debian copyright record from the independently versioned `hunspell-kk` source
 package establishes that GPL 2 or later, LGPL 2.1 or later, and MPL 1.1 are
 alternative license choices. Removing the UTF-8 BOM and normalizing CRLF to LF
 reproduces the locked payloads from that source commit byte for byte.
+
+The `lt_LT` payloads are exact blobs from the locked dictionaries commit. They
+are reproducibly derived from the LibreOffice import of `ispell-lt` release
+`rel-1.3`: decode ISO-8859-13, change the affix `SET` declaration to UTF-8,
+and encode with a UTF-8 BOM while preserving LF line endings. The upstream
+`COPYING` file supplies the complete BSD 3-Clause terms.
+
+The `sl_SI` payloads are exact blobs from the locked dictionaries commit.
+Re-encoding the LibreOffice source payloads from ISO-8859-2 to BOM-free UTF-8,
+and updating only their charset declarations, reproduces the locked bytes. The
+reviewed branch combines the explicitly selected LGPL 2.1 spelling and
+adaptation terms with the original hyphenation patterns' LPPL 1.0 terms.
 
 `ASC.ttf` is intentionally absent because no redistribution grant was found.
 The `liberation` component is intentionally absent because its 1.07.4 custom

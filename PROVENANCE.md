@@ -139,3 +139,56 @@ The independent source blobs use a UTF-8 BOM and CRLF line endings. Removing
 the BOM and normalizing CRLF to LF yields the locked payloads byte for byte;
 the evidence repository retains the locked ONLYOFFICE bytes without applying
 checkout-time conversion.
+
+## lt_LT
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Original source release: `ispell-lt/ispell-lt` tag `rel-1.3`, commit
+  `28d2ca550b1a35ae17a780d9e5da95d3577187ed`.
+- LibreOffice import source: `LibreOffice/dictionaries` commit
+  `143afd75257fd4c4b44f09ee402ec8caa09011ba`.
+- Reviewed SPDX expression: `BSD-3-Clause`.
+- License evidence: `lt_LT/COPYING`, Git blob
+  `5bf5024e7a3df8f84f204b6d85bfc2122f8db7d5`, SHA-256
+  `97c7647bb681f70233ba9698daf7d7837764796cb98ca88abfed38ca03af47a5`.
+
+| Mirrored payload | Locked blob | SHA-256 | LibreOffice source blob |
+| --- | --- | --- | --- |
+| `lt_LT/lt_LT.aff` | `867647faa37b1f6b24bd181d67c18ac6a098c6e1` | `97805d6f3c3caa1e7a2e2d45ceee0e1d350bee620f67b50f3fa082c9ce833436` | `lt_LT/lt.aff` at `ca3302380ae7f0cc0b9a9818d390c754a34e1d92`, SHA-256 `01ec7b4edc369f696c39918aa9b33e5e738005983f3a76ce4817af2ed361b060` |
+| `lt_LT/lt_LT.dic` | `d277159a4819cbb2beefb3f5cc54f0f6eaae655e` | `8be8c6784700fa148fddd0339b3149b5abaae2a49e46c5179d0a6f849d418463` | `lt_LT/lt.dic` at `17e81f671679bc6b48ade05a33d2af308efbaf4e`, SHA-256 `1714f38f7b80f35799ab6abb8ff4a40fa1de805e1adc1d4d30c0b5a179887469` |
+
+The LibreOffice source payloads use ISO-8859-13 and LF line endings. Decode
+that charset and encode as UTF-8 with a BOM; for the affix payload, also change
+the first line from `SET ISO8859-13` to `SET UTF-8`. These transformations
+produce the locked payloads byte for byte, with no other normalization.
+
+## sl_SI
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Independent payload and notice source: `LibreOffice/dictionaries` commit
+  `411b531d4c2c83e66008e0d2782baa455e2731e3`.
+- Original hyphenation source: `hyphenation/tex-hyphen` commit
+  `bb15dbad332f4cbcea9f5284ef469629dcdd79ea`.
+- Reviewed SPDX expression: `LGPL-2.1-only AND LPPL-1.0`.
+
+| Mirrored payload | Locked blob | SHA-256 | LibreOffice source blob |
+| --- | --- | --- | --- |
+| `sl_SI/sl_SI.aff` | `add26403e7515cdffe86f64fbf0dec15fa6859c9` | `f6404c6004cd4a218d687b223b9f584c19802e494a583efe7bf6eccf26b55d84` | `dictionaries/sl_SI/sl_SI.aff` at `9f2397ee45c3343d2da8a973490cf2bbb6848a1a`, SHA-256 `3cb3e84824959928c8004e07b37b9d2bcb84176095f514e134f006dbb14a0beb` |
+| `sl_SI/sl_SI.dic` | `af84c2cfafdc0c6239c90b6d4df9730e04d1c96c` | `5bac615dbd301ddbefbdaafdae242a89e46605916d77958df22778e770a95b9e` | `dictionaries/sl_SI/sl_SI.dic` at `6a3ce6bd62cd017a731c47492fb5cd81fb136e38`, SHA-256 `e157aabf1a20d21f639d04cf79f019ff1a3eb623c6780a726ffa4293787fa0ab` |
+| `sl_SI/hyph_sl_SI.dic` | `49f6ccca86d9af2a6e65e40794a37396609366e6` | `365c2dbfcf446e5dca7c75488389f6811aef498ad4e7125844b0182627ab7e33` | `dictionaries/sl_SI/hyph_sl_SI.dic` at `8a506283f3fd8698d22def5b48dc0767a25418a9`, SHA-256 `3d9026755aa0936e9331595a08bb65c295ccac84acefe58cb6c9fe2ff11ceef8` |
+
+The two locked README files are byte-identical to the LibreOffice notices.
+`Readme_sl_SI.txt` selects LGPL 2.1 for the spelling payloads. The hyphenation
+README applies the same LGPL 2.1 choice to the OpenOffice adaptation, while
+`hyph-sl.tex` blob `f353194b1090189a728cb582821ca6dab195e6e6`, SHA-256
+`dd50791eb083ed7a163cd883bf7175fc914cc01e41f3b5b7b94d2106d5beb1da`,
+licenses the original patterns under LPPL version 1 or later. This snapshot
+selects LPPL 1.0 and retains the complete `LPPL-1.0.txt` and
+`COPYING_LGPL_v2.1.txt` texts.
+
+The LibreOffice payloads use ISO-8859-2 and LF line endings. Decode that
+charset and encode as BOM-free UTF-8; change `SET ISO8859-2` to `SET UTF-8` in
+the affix file and the leading `ISO8859-2` to `UTF-8` in the hyphenation file.
+These transformations produce the locked payloads byte for byte.
