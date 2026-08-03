@@ -261,3 +261,74 @@ The original `hyph-it.README` blob
 grants LGPL version 2.1 or later. The complete LGPL 2.1 text is retained as
 `COPYING_LGPL_v2.1.txt`, SHA-256
 `dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551`.
+
+## el_GR
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Independent hyphenation source: Fedora 11 archive source RPM
+  `hyphen-el-0.20051018-2.fc11.src.rpm`, SHA-256
+  `fd90823697986c07cef82cd2ae9a660b348a80eeed1d1e2aca805b28011e5824`.
+- Source ZIP: MD5 `73c0d55de8ad750557b0703c5004279e`, SHA-256
+  `8609bd1f835839b2b44ebd3587a2c4fc25327fb22f7de02a7528cae39d9d17d5`.
+- Fedora license metadata: `el_GR/hyphen-el.spec`, SHA-256
+  `076c586f8ca3a4f7b5c62c0f815e3570c14bbc8a598baae3e0b013cea34c86ea`,
+  declares `License: LGPLv2+` for the packaged dictionary.
+- Reviewed SPDX expression: `LGPL-2.1-or-later`.
+
+| Mirrored payload | Locked blob | SHA-256 | Independent source |
+| --- | --- | --- | --- |
+| `el_GR/el_GR.aff` | `aad0574a85627584cb335fb700f961dee86e76e8` | `3f3188c71b9d1f640c9e680bc890b22249b83b640ec46f305b6a2257974bfa3f` | locked `el_GR_Greek.txt` selects LGPL 2.1 or later |
+| `el_GR/el_GR.dic` | `e490e628150303209f174d806f74708d46b7ca2a` | `f08daefb302600beb1b345e4fd77f4ecf6617aa080a72efe6ae7eec0ad5b2ac7` | locked `el_GR_Greek.txt` selects LGPL 2.1 or later |
+| `el_GR/hyph_el_GR.dic` | `6fa72d1fc43ab65a4ce31fd8762f8d7dbeb47dd5` | `58c1a8c6172d278128e8a0dfe251327a8478e839b4ffa5e99b4ef9968aea4a55` | Fedora source blob `7e7bb497a325cbf3f897d5f6b23b98bb1895b59b`, SHA-256 `f2284153c3f9a809b959dcaeb349e00d90b4c4cf37c3d3a338b371c32f10e89d` |
+
+The Fedora source starts with `ISO8859-7`. Decode the remaining content as
+ISO-8859-7, replace only that first line with `UTF-8`, and encode as BOM-free
+UTF-8 with LF endings. The result is byte-identical to the locked payload. The
+complete LGPL 2.1 text is retained as `COPYING_LGPL_v2.1.txt`, SHA-256
+`dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551`.
+
+## pt_PT
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Independent source: Debian `libreoffice-dictionaries 1:7.2.0-1`.
+- Signed source record: `libreoffice-dictionaries_7.2.0-1.dsc`, SHA-256
+  `e4d1ac6f71bfe219b8c26bf5719ad6adcdbf369d764ea90972015f7b7ef40e73`.
+- Debian copyright mapping: `pt_PT/COPYRIGHT`, SHA-256
+  `15092e924d00de1c127e75f08089fac9579808d47ccd64dd661f5fac428fd4ab`.
+- Reviewed SPDX expression: `GPL-2.0-only`.
+
+| Mirrored payload | Locked blob | SHA-256 | Debian source SHA-256 |
+| --- | --- | --- | --- |
+| `pt_PT/pt_PT.aff` | `ef6aaf55ccc2cfba2948cf5a92eb5f4849634c12` | `975a209fcc892cb382fa5f34a28c391a39668661ce373ae071287809c5fcae24` | byte-identical |
+| `pt_PT/pt_PT.dic` | `fddc72f208101ae20e104a4e0ba91ef02a46bf2c` | `9d90cfd9fb15312db71fbe46c11f871df67684dae7c218ab270142e7ae68c377` | byte-identical |
+| `pt_PT/hyph_pt_PT.dic` | `175866df94a7c1f7fc80500256cbeeea039d5185` | `aea78ca4e52f3f17f49a9009dc77b55e30e27dd72bae40f2ff71d8e36d244fca` | `6f18ee89de6db21d9b06120a5527ec41d8132514fc112ccfe7d289ba91649840` |
+
+The Debian spelling bytes are exact. For hyphenation, decode the source as
+ISO-8859-1, replace only the leading `ISO8859-1` declaration with `UTF-8`, and
+encode as BOM-free UTF-8 with LF endings. The result reproduces the locked
+payload. `COPYING_GPLv2` is the complete GPL 2 text, SHA-256
+`edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6`.
+
+## uk_UA
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Independent source: `arysin/spell-uk` commit
+  `224e59f701c6db89df2dbbdaf1a079657b8cdf7f`.
+- Program license evidence: `uk_UA/COPYRIGHT`, source blob
+  `7121bb91b121f43f4c1351d0b9682ef156efbba7`, SHA-256
+  `d4ae120c2b0559043aaa6f92f586316e9cbd3cd62fcd3c2d605c82476a022dff`.
+- Reviewed SPDX expression: `GPL-2.0-or-later`.
+
+| Mirrored payload | Locked and source blob | SHA-256 |
+| --- | --- | --- |
+| `uk_UA/th_uk_UA.dat` | `93fc9e6e032d7bf5f46b7be8eb4185978ac2a4cf` | `1eebe8fc0c178b6e9c00c35abd79688f160039f38a74fdbf3afa368a016d3b06` |
+| `uk_UA/th_uk_UA.idx` | `a679b504b7f7edea2af4546ec91a5c12878fb324` | `35e96ce9efab98958b99fe02668a516f59e51950179f805a082e039f10ce5cf2` |
+
+`th_uk_UA.dat` is byte-identical to the independent source. Feeding it to
+`th_gen_idx.pl` blob `0b649fcaea34498a0df920d3cad1e0695fd43499`
+produces the locked index byte for byte. `COPYING_GPLv2` retains the complete
+GPL 2 text, SHA-256
+`edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6`.
