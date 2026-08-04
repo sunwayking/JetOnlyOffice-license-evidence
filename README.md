@@ -16,6 +16,7 @@ own reviewed SPDX expression and evidence locator:
 | `kacst-one` | `GPL-2.0-only` | `kacst-one/LICENSE` |
 | `az_Latn_AZ` | `GPL-2.0-or-later` | `az_Latn_AZ/COPYRIGHT`, `az_Latn_AZ/COPYING_GPL_v2.txt`, `az_Latn_AZ/hunspell-az.spec` |
 | `da_DK` | `(GPL-2.0-only OR LGPL-2.1-only OR MPL-1.1) AND LGPL-2.1-or-later AND LPPL-1.3c` | `da_DK/da_DK_Danish.txt`, `da_DK/README_hyph_da_DK.txt`, `da_DK/hyphen-da.spec`, `da_DK/dkhyph.tex` |
+| `en_AU` | `LGPL-3.0-only AND LicenseRef-SCOWL-2020-12-07` | `en_AU/README_en_AU.txt`, `en_AU/extension-makefile.mk`, `en_AU/COPYING_LGPL_v3.txt` |
 | `en_GB` | `LGPL-3.0-only AND LicenseRef-Hyphen-en-GB-2011-10-07` | `en_GB/lgpl-3.0.txt`, `en_GB/README_hyph_en_GB.txt` |
 | `de_AT` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_AT/README_de_DE_frami.txt`, `de_AT/README_hyph_de.txt`, `de_AT/dehyphn.tex` |
 | `de_CH` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_CH/README_de_DE_frami.txt`, `de_CH/README_hyph_de.txt`, `de_CH/dehyphn.tex` |
@@ -47,6 +48,14 @@ The `en_GB` spelling and hyphenation payloads are exact Git blobs from the
 locked dictionaries commit. `README_en_GB.txt` retains the spelling-dictionary
 provenance, while the two evidence locators provide the complete LGPL 3.0 and
 versioned hyphenation terms used by the reviewed component mapping.
+
+The `en_AU` spelling payloads and SCOWL 2020.12.07 notice are exact blobs from
+the locked dictionaries commit. Its hyphenation payload is the historical
+OpenOffice `dict-en` source blob with only the first-line encoding declaration
+changed from `ISO8859-1` to `UTF-8`. The extension build manifest packages that
+exact source blob, keeps the default OpenOffice license, and declares LGPL
+version 3 only. The reviewed expression retains the distinct spelling and
+hyphenation grants.
 
 The three German components are also exact blobs from the locked dictionaries
 commit. Their LibreOffice source payloads are reproducibly converted from

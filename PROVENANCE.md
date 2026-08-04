@@ -119,6 +119,45 @@ conversion offline.
 - LGPL 3.0 text: <https://www.gnu.org/licenses/lgpl-3.0.txt>, SHA-256
   `e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118`.
 
+## en_AU
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Independent hyphenation and package source: `LibreOffice/dictionaries`
+  historical commit `5703447784205e94278ef3d724ba1f89fce1dae1`.
+- Original introduction commit: `4d79a4c76d14fed8ceb329573caaa224764fea93`,
+  whose message identifies the imported English dictionary as LGPL.
+- Reviewed SPDX expression:
+  `LGPL-3.0-only AND LicenseRef-SCOWL-2020-12-07`.
+
+| Mirrored payload | Locked blob | SHA-256 | Independent source |
+| --- | --- | --- | --- |
+| `en_AU/en_AU.aff` | `290acfe87caf0f7ef44cf04dba4cd3b3cf2dbc58` | `e746c882dd6f303c2c46e7452804b9201115a6942cfeb15f18f8edf774d2e24e` | SCOWL 2020.12.07 notice |
+| `en_AU/en_AU.dic` | `c7e8ccb71535d1c854ee0ba71cf27cfc93ac48ba` | `aa07c46571f306b79fc1bc534357ed357af15687381b26f891ba66e8a2caed89` | SCOWL 2020.12.07 notice |
+| `en_AU/hyph_en_AU.dic` | `3df13df6503a037d262187772abfd7ce37d4a607` | `2d2598c7660a44d2e05fae3d1a443f9a71ac5450de3b9a14a9db0f457006ac59` | blob `c2c5f8e2f7afa8259e0aeded6a859d8026fde1c0` |
+
+`README_en_AU.txt` is the locked Git blob
+`8e870199249d37ea240fd723f5723858ee8d1ea3`, SHA-256
+`f0897dcfdf058bcfc93fbc8e7e1b5da4c27ae9e175ee3a9242e887f02eb84a8b`.
+It identifies SCOWL version 2020.12.07 and retains the complete permission
+notices for the spelling payloads.
+
+The independent `dict-en` extension build manifest is Git blob
+`cb6aecebba79afef12fa264ae4ba650bd7df3417`, SHA-256
+`0d34cc6efaebbfb8260a33ea27309df5b470da69af9a7b1c7fdd91ee148ce609`.
+It lists the exact `hyph_en_GB.dic` source blob in `COMPONENT_FILES`, leaves the
+default OpenOffice license enabled, and declares GNU LGPL version 3 only. The
+locked `description.xml` and `package-dictionaries.xcu` identify the English
+spelling and hyphenation extension and register that payload as `DICT_HYPH`.
+`COPYING_LGPL_v3.txt` retains the complete LGPL version 3 text, SHA-256
+`e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118`.
+
+The source blob starts with `ISO8859-1` and has LF line endings. Replace only
+that first-line declaration with `UTF-8`; the resulting bytes reproduce the
+locked `hyph_en_AU.dic` exactly. `en_AU/verify-transform.ps1` verifies every
+digest and Git blob, the package-to-payload and versioned-license statements,
+and the deterministic conversion offline.
+
 ## de_AT, de_CH, and de_DE
 
 - Locked payload source: `ONLYOFFICE/dictionaries` commit
