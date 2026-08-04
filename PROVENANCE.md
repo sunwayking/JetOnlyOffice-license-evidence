@@ -50,6 +50,52 @@ It covers George Douros fonts, not Rekha or Padmaa.
 - Ubuntu copyright SHA-256: `5d12ca7c5fba6bd2c8bbe9f0a079befa8311d98300345e48aaa9dde28a0257cc`.
 - Source: <https://launchpad.net/ubuntu/+source/fonts-kacst-one/5.0%2Bsvn11846-9>.
 
+## az_Latn_AZ
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Original word-list package: GNU Aspell Azerbaijani dictionary `0.02-0`,
+  published 2004-08-27 at
+  <https://ftp.gnu.org/gnu/aspell/dict/az/aspell6-az-0.02-0.tar.bz2>.
+- Aspell archive SHA-256:
+  `063176ec459d61acd59450ae49b5076e42abb1dcd54c1f934bae5fa6658044c3`.
+- Fedora packaging snapshot: `gooselinux/hunspell-az` commit
+  `3f3a8ea1188d9557b30cea74c0a888b2183f1aa6`; spec Git blob
+  `268708f8f037c3229eba51603649e58f0df52685`, SHA-256
+  `2f4ae6cef4f3edcd2e2946a1cd0d1fe77567564392cb1244326319d8e3561ff3`.
+- Fedora 24 binary RPM:
+  <https://kojipkgs.fedoraproject.org/packages/hunspell-az/0.20040827/14.fc24/noarch/hunspell-az-0.20040827-14.fc24.noarch.rpm>,
+  SHA-256
+  `e78edfd329d797f77b684b73e47153a884be2046d9e299e8df573289fc9cd378`.
+- Exact Hunspell source snapshot: `MatiasConTilde/TheFuckTelegram` commit
+  `e95bc1a198b97b343b5503612ffa112ff9b00a15`, directory
+  `dicts/az_AZ-latin`.
+- Reviewed SPDX expression: `GPL-2.0-or-later`.
+
+| Mirrored payload | Locked blob | SHA-256 | Source blob | Source SHA-256 |
+| --- | --- | --- | --- | --- |
+| `az_Latn_AZ/az_Latn_AZ.aff` | `a4cf374625ee63c72d46acc0dd907757a3b28fda` | `4d09c657a59cf5266c897ddb23033cb7eccc36b97036ec76627af97a4b8df25a` | `c330d3960e3c4276d4242b262b981c524024969b` | `ae28ceef851a97abeb65165a4aab8195719f2eda7aebfe35c51d448cca5da814` |
+| `az_Latn_AZ/az_Latn_AZ.dic` | `ea6b0c21890af52b8ec9cf395f814cf1fe350709` | `7e1ced8fadfc2368d1af81f09f0a58d70d0e7beb28c86d667f98e9cb238787d8` | `2f3474cc90b2937013f85e18986d9dd93b0462fb` | `dd4f966711b93a27d26d26cee91ded564d5d5b67aab86e8dba689cfdb2f19f19` |
+
+Both source payloads are BOM-free UTF-8 with LF line endings. Prepend the
+three UTF-8 BOM bytes and insert CR before every LF; the results are the locked
+payloads byte for byte. The source dictionary is also byte-identical to the
+Fedora 24 RPM member `/usr/share/myspell/az_AZ.dic`.
+
+`COPYRIGHT` is Git blob `f6e2bbc6498024f151628f6af2985381181735fe`,
+SHA-256 `f8802a13346e5c3e4563b55b9494dd7146cc916367ac78e9757735b23ba3996f`.
+It is byte-identical to the official Aspell archive member, identifies the
+three word-list authors, and grants redistribution or modification under GPL
+version 2 or later. `COPYING_GPL_v2.txt` retains the complete version 2 text,
+SHA-256 `204d8eff92f95aac4df6c8122bc1505f468f3a901e5a4cc08940e0ede1938994`.
+The Fedora spec binds that same archive digest, declares `GPL+`, runs
+`preunzip` and `wordlist2hunspell`, and packages the generated `.aff` and
+`.dic` together with the copyright and license files. The RPM was published
+before the locked files entered the ONLYOFFICE repository.
+`az_Latn_AZ/verify-transform.ps1` verifies all evidence digests, source and
+locked Git blob IDs, required license text, and the deterministic byte
+conversion offline.
+
 ## en_GB
 
 - Locked payload source: `ONLYOFFICE/dictionaries` commit

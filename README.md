@@ -14,6 +14,7 @@ own reviewed SPDX expression and evidence locator:
 | `fonts-gujr-extra` | `GPL-2.0-or-later` | `fonts-gujr-extra/LICENSE` |
 | `kacst` | `GPL-2.0-only` | `kacst/LICENSE` |
 | `kacst-one` | `GPL-2.0-only` | `kacst-one/LICENSE` |
+| `az_Latn_AZ` | `GPL-2.0-or-later` | `az_Latn_AZ/COPYRIGHT`, `az_Latn_AZ/COPYING_GPL_v2.txt`, `az_Latn_AZ/hunspell-az.spec` |
 | `da_DK` | `(GPL-2.0-only OR LGPL-2.1-only OR MPL-1.1) AND LGPL-2.1-or-later AND LPPL-1.3c` | `da_DK/da_DK_Danish.txt`, `da_DK/README_hyph_da_DK.txt`, `da_DK/hyphen-da.spec`, `da_DK/dkhyph.tex` |
 | `en_GB` | `LGPL-3.0-only AND LicenseRef-Hyphen-en-GB-2011-10-07` | `en_GB/lgpl-3.0.txt`, `en_GB/README_hyph_en_GB.txt` |
 | `de_AT` | `(GPL-2.0-only OR GPL-3.0-only) AND LGPL-2.0-or-later AND LPPL-1.0` | `de_AT/README_de_DE_frami.txt`, `de_AT/README_hyph_de.txt`, `de_AT/dehyphn.tex` |
@@ -34,6 +35,13 @@ own reviewed SPDX expression and evidence locator:
 The `LICENSE.GPL-2.0` copies supplement the Debian copyright mappings with the
 complete GPL version 2 text. Supplementary `COPYRIGHT` files retain the
 package-to-file provenance for the KACST components.
+
+The `az_Latn_AZ` payloads are reproduced from an immutable Hunspell snapshot
+that carries the Azerbaijani Aspell package copyright notice. Adding a UTF-8
+BOM and converting LF line endings to CRLF reproduces both locked payloads
+byte for byte. The official Aspell 0.02-0 archive, a digest-bound Fedora spec,
+and a Fedora 24 binary RPM retain the original word-list provenance, the GPL
+version 2 or later grant, and the complete GPL version 2 text.
 
 The `en_GB` spelling and hyphenation payloads are exact Git blobs from the
 locked dictionaries commit. `README_en_GB.txt` retains the spelling-dictionary
