@@ -27,6 +27,7 @@ own reviewed SPDX expression and evidence locator:
 | `it_IT` | `GPL-3.0-only AND LGPL-2.1-or-later` | `it_IT/README_it_IT.txt`, `it_IT/README_hyph_it_IT.txt`, `it_IT/hyph-it.README` |
 | `kk_KZ` | `GPL-2.0-or-later OR LGPL-2.1-or-later OR MPL-1.1` | `kk_KZ/COPYRIGHT` |
 | `lt_LT` | `BSD-3-Clause` | `lt_LT/COPYING` |
+| `mn_MN` | `LPPL-1.3c` | `mn_MN/LICENSE` |
 | `pt_BR` | `LGPL-2.1-only AND LGPL-3.0-only` | `pt_BR/README_pt_BR.TXT`, `pt_BR/README_hyph_pt_BR.txt`, `pt_BR/hyphen-pt.spec` |
 | `pt_PT` | `GPL-2.0-only` | `pt_PT/COPYRIGHT`, `pt_PT/COPYING_GPLv2` |
 | `ru_RU` | `LicenseRef-Russian-Dictionaries-Lebedev-1997-2008` | `ru_RU/README_ru_RU.libreoffice.txt`, `ru_RU/COPYRIGHT`, `ru_RU/LICENSERef-Russian-Dictionaries-Lebedev-1997-2008.txt` |
@@ -78,6 +79,13 @@ are reproducibly derived from the LibreOffice import of `ispell-lt` release
 `rel-1.3`: decode ISO-8859-13, change the affix `SET` declaration to UTF-8,
 and encode with a UTF-8 BOM while preserving LF line endings. The upstream
 `COPYING` file supplies the complete BSD 3-Clause terms.
+
+The `mn_MN` spelling payloads are exact blobs from the author's annotated
+`2022.07.28` tag. That tag carries the complete LPPL 1.3c text at repository
+root, and both payloads directly grant LPPL version 1.3 or later in their file
+headers. The locked hyphenation payload has the same direct grant. The
+localized README is retained for provenance but is not used as the license
+locator; the reviewed mapping does not infer license terms from its prose.
 
 The `sl_SI` payloads are exact blobs from the locked dictionaries commit.
 Re-encoding the LibreOffice source payloads from ISO-8859-2 to BOM-free UTF-8,

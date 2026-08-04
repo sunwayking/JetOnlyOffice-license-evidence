@@ -282,6 +282,31 @@ that charset and encode as UTF-8 with a BOM; for the affix payload, also change
 the first line from `SET ISO8859-13` to `SET UTF-8`. These transformations
 produce the locked payloads byte for byte, with no other normalization.
 
+## mn_MN
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`.
+- Independent spelling source: `bataak/dict-mn` annotated tag `2022.07.28`,
+  tag object `0ec325fa434bad9d4cbdef43a077e6e9ddaa8263`, peeled commit
+  `d0c4b8ea6dfa8563b3d9defb367719566d95acb6`.
+- Reviewed SPDX expression: `LPPL-1.3c`.
+- Complete license text: `mn_MN/LICENSE`, source blob
+  `4db9b5af292e9840b7e250a9e55b50dc35a051b7`, SHA-256
+  `27597ab18210ecf1285ec984cb153df71cf17119347a3fb5ca52b15eccba53f6`.
+
+| Mirrored payload | Locked blob | SHA-256 | Independent source |
+| --- | --- | --- | --- |
+| `mn_MN/mn_MN.aff` | `7362274dc6ecf1cee4a329499191de6c3e56c80f` | `87efe2c6e537a90e17be372428e4dfeb2bba015b8b55621b5c21c68b4910e84d` | byte-identical to `bataak/dict-mn` tag `2022.07.28` |
+| `mn_MN/mn_MN.dic` | `dee45074082430b0ca4f9883e1b0824bba70b17b` | `2a54ec6fc032b6ec6fc5e825c2fcfa92ffb355553bab641a2c2b5e05ffec6fa0` | byte-identical to `bataak/dict-mn` tag `2022.07.28` |
+| `mn_MN/hyph_mn_MN.dic` | `5537e84ed40812b8356406b271ffb747caeed286` | `1a84d6b69fef22efdbee6e2f53e45b2aabfbfc7789b1dabc54950d7d3cd29ebe` | payload-local LPPL 1.3-or-later header |
+
+The two spelling blobs have identical Git object IDs in the locked
+ONLYOFFICE mirror and the author's tagged repository. Each spelling file and
+the hyphenation file carries the same explicit LPPL 1.3-or-later grant. The
+source README is mirrored as `mn_MN/README_mn_MN.txt` for byte provenance, but
+its localized warning is deliberately not treated as a license evidence
+locator; no translation or inferred exception is used in the reviewed map.
+
 ## sl_SI
 
 - Locked payload source: `ONLYOFFICE/dictionaries` commit
