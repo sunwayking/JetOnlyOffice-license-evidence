@@ -39,10 +39,10 @@ package-to-file provenance for the KACST components.
 
 The `az_Latn_AZ` payloads are reproduced from an immutable Hunspell snapshot
 that carries the Azerbaijani Aspell package copyright notice. Adding a UTF-8
-BOM and converting LF line endings to CRLF reproduces both locked payloads
-byte for byte. The official Aspell 0.02-0 archive, a digest-bound Fedora spec,
-and a Fedora 24 binary RPM retain the original word-list provenance, the GPL
-version 2 or later grant, and the complete GPL version 2 text.
+BOM while preserving LF line endings reproduces both locked Git blobs byte for
+byte. The official Aspell 0.02-0 archive, a digest-bound Fedora spec, and a
+Fedora 24 binary RPM retain the original word-list provenance, the GPL version
+2 or later grant, and the complete GPL version 2 text.
 
 The `en_GB` spelling and hyphenation payloads are exact Git blobs from the
 locked dictionaries commit. `README_en_GB.txt` retains the spelling-dictionary

@@ -62,24 +62,24 @@ function Convert-ToLockedPayload([byte[]]$Source) {
     throw "source payload must not contain a UTF-8 BOM"
   }
 
-  $converted = [Collections.Generic.List[byte]]::new()
-  $converted.AddRange([byte[]](0xEF, 0xBB, 0xBF))
   foreach ($value in $Source) {
     if ($value -eq 0x0D) {
       throw "source payload must use LF-only line endings"
     }
-    if ($value -eq 0x0A) {
-      $converted.Add(0x0D)
-    }
-    $converted.Add($value)
   }
-  return $converted.ToArray()
+
+  $converted = [byte[]]::new($Source.Length + 3)
+  $converted[0] = 0xEF
+  $converted[1] = 0xBB
+  $converted[2] = 0xBF
+  [Array]::Copy($Source, 0, $converted, 3, $Source.Length)
+  return $converted
 }
 
 $hashes = [ordered]@{
   "aspell6-az-0.02-0.tar.bz2" = "063176ec459d61acd59450ae49b5076e42abb1dcd54c1f934bae5fa6658044c3"
-  "az_Latn_AZ.aff" = "4d09c657a59cf5266c897ddb23033cb7eccc36b97036ec76627af97a4b8df25a"
-  "az_Latn_AZ.dic" = "7e1ced8fadfc2368d1af81f09f0a58d70d0e7beb28c86d667f98e9cb238787d8"
+  "az_Latn_AZ.aff" = "4b9cdc2bd26c2c8e34d23f10f3e8d4d014bb0d1dc7e274fbc7e3bdc097b28bec"
+  "az_Latn_AZ.dic" = "682e06189b1015d184cd65d8d68dedd6383fac9f0b8c850c17db5cd22d030761"
   "az-Latn-AZ.aff.source" = "ae28ceef851a97abeb65165a4aab8195719f2eda7aebfe35c51d448cca5da814"
   "az-Latn-AZ.dic.source" = "dd4f966711b93a27d26d26cee91ded564d5d5b67aab86e8dba689cfdb2f19f19"
   "COPYING_GPL_v2.txt" = "204d8eff92f95aac4df6c8122bc1505f468f3a901e5a4cc08940e0ede1938994"
@@ -96,8 +96,8 @@ foreach ($entry in $hashes.GetEnumerator()) {
 }
 
 $gitBlobs = [ordered]@{
-  "az_Latn_AZ.aff" = "a4cf374625ee63c72d46acc0dd907757a3b28fda"
-  "az_Latn_AZ.dic" = "ea6b0c21890af52b8ec9cf395f814cf1fe350709"
+  "az_Latn_AZ.aff" = "30cf29a721bab2994913a886a25ab8a1d695a7c8"
+  "az_Latn_AZ.dic" = "dd415fa85246ab1044465d838e041fc6d1b8cdf0"
   "az-Latn-AZ.aff.source" = "c330d3960e3c4276d4242b262b981c524024969b"
   "az-Latn-AZ.dic.source" = "2f3474cc90b2937013f85e18986d9dd93b0462fb"
   "COPYING_GPL_v2.txt" = "5b6e7c66c276e7610d4a73c70ec1a1f7c1003259"

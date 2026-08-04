@@ -74,13 +74,13 @@ It covers George Douros fonts, not Rekha or Padmaa.
 
 | Mirrored payload | Locked blob | SHA-256 | Source blob | Source SHA-256 |
 | --- | --- | --- | --- | --- |
-| `az_Latn_AZ/az_Latn_AZ.aff` | `a4cf374625ee63c72d46acc0dd907757a3b28fda` | `4d09c657a59cf5266c897ddb23033cb7eccc36b97036ec76627af97a4b8df25a` | `c330d3960e3c4276d4242b262b981c524024969b` | `ae28ceef851a97abeb65165a4aab8195719f2eda7aebfe35c51d448cca5da814` |
-| `az_Latn_AZ/az_Latn_AZ.dic` | `ea6b0c21890af52b8ec9cf395f814cf1fe350709` | `7e1ced8fadfc2368d1af81f09f0a58d70d0e7beb28c86d667f98e9cb238787d8` | `2f3474cc90b2937013f85e18986d9dd93b0462fb` | `dd4f966711b93a27d26d26cee91ded564d5d5b67aab86e8dba689cfdb2f19f19` |
+| `az_Latn_AZ/az_Latn_AZ.aff` | `30cf29a721bab2994913a886a25ab8a1d695a7c8` | `4b9cdc2bd26c2c8e34d23f10f3e8d4d014bb0d1dc7e274fbc7e3bdc097b28bec` | `c330d3960e3c4276d4242b262b981c524024969b` | `ae28ceef851a97abeb65165a4aab8195719f2eda7aebfe35c51d448cca5da814` |
+| `az_Latn_AZ/az_Latn_AZ.dic` | `dd415fa85246ab1044465d838e041fc6d1b8cdf0` | `682e06189b1015d184cd65d8d68dedd6383fac9f0b8c850c17db5cd22d030761` | `2f3474cc90b2937013f85e18986d9dd93b0462fb` | `dd4f966711b93a27d26d26cee91ded564d5d5b67aab86e8dba689cfdb2f19f19` |
 
-Both source payloads are BOM-free UTF-8 with LF line endings. Prepend the
-three UTF-8 BOM bytes and insert CR before every LF; the results are the locked
-payloads byte for byte. The source dictionary is also byte-identical to the
-Fedora 24 RPM member `/usr/share/myspell/az_AZ.dic`.
+Both source payloads are BOM-free UTF-8 with LF line endings. Prepending the
+three UTF-8 BOM bytes while preserving LF line endings produces the locked Git
+blobs byte for byte. The source dictionary before the BOM is also byte-identical
+to the Fedora 24 RPM member `/usr/share/myspell/az_AZ.dic`.
 
 `COPYRIGHT` is Git blob `f6e2bbc6498024f151628f6af2985381181735fe`,
 SHA-256 `f8802a13346e5c3e4563b55b9494dd7146cc916367ac78e9757735b23ba3996f`.
