@@ -50,6 +50,33 @@ It covers George Douros fonts, not Rekha or Padmaa.
 - Ubuntu copyright SHA-256: `5d12ca7c5fba6bd2c8bbe9f0a079befa8311d98300345e48aaa9dde28a0257cc`.
 - Source: <https://launchpad.net/ubuntu/+source/fonts-kacst-one/5.0%2Bsvn11846-9>.
 
+## liberation
+
+- Locked payload source: `ONLYOFFICE/core-fonts` commit
+  `7030c6681fb5bbed560675cb42422f91df15d5c9`.
+- Upstream source archive:
+  <https://releases.pagure.org/liberation-fonts/liberation-fonts-1.07.4.tar.gz>,
+  2,937,949 bytes, SHA-256
+  `ad98b7498dc2992f7f0868f79b65ce4a720a3acdb63ab3f1f1cb6881117a5406`.
+- Complete license text SHA-256:
+  `c40dd6adebad817defd68c7edad151d9c13d2ac3b4e1790ce2b727b024438b6d`.
+- Fedora license-data commit:
+  `f56793a144b02e58458cb1556b85b1db32a45ab4`; `LicenseRef-Liberation.toml`
+  SHA-256 `11e4dd5a35e5f2640a68e2153b272ecc9e1b7e70fa0c5ef99a74ff2e6aeb0582`.
+- Fedora classification: `LicenseRef-Liberation`, status `allowed-fonts`.
+- Debian source record: `fonts-liberation 1:1.07.4-2`, DSC SHA-256
+  `d51db467a65d67ede5f6cace49946dd869f3ee3c8f264ee45e7b1c60eacdea5c`.
+- Debian binary package SHA-256:
+  `b342d0382aaf8d64a61c347b6e83f84c1ad50aa4ed3df661ece9010fce3ee72a`.
+- Reviewed expression: `LicenseRef-Liberation`.
+
+All sixteen mirrored TTFs are byte-identical to the locked core-fonts Git
+blobs. Their full path, blob, and SHA-256 mapping is verified offline by
+`liberation/verify-transform.ps1` and repeated in the consuming source lock.
+The source and Debian artifacts establish the 1.07.4 provenance; Fedora's
+license-data record resolves the earlier policy ambiguity without discarding
+the custom license text or the Sans Narrow payloads.
+
 ## az_Latn_AZ
 
 - Locked payload source: `ONLYOFFICE/dictionaries` commit

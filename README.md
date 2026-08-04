@@ -14,6 +14,7 @@ own reviewed SPDX expression and evidence locator:
 | `fonts-gujr-extra` | `GPL-2.0-or-later` | `fonts-gujr-extra/LICENSE` |
 | `kacst` | `GPL-2.0-only` | `kacst/LICENSE` |
 | `kacst-one` | `GPL-2.0-only` | `kacst-one/LICENSE` |
+| `liberation` | `LicenseRef-Liberation` | `liberation/License.txt`, `liberation/LicenseRef-Liberation.toml` |
 | `az_Latn_AZ` | `GPL-2.0-or-later` | `az_Latn_AZ/COPYRIGHT`, `az_Latn_AZ/COPYING_GPL_v2.txt`, `az_Latn_AZ/hunspell-az.spec` |
 | `da_DK` | `(GPL-2.0-only OR LGPL-2.1-only OR MPL-1.1) AND LGPL-2.1-or-later AND LPPL-1.3c` | `da_DK/da_DK_Danish.txt`, `da_DK/README_hyph_da_DK.txt`, `da_DK/hyphen-da.spec`, `da_DK/dkhyph.tex` |
 | `en_AU` | `LGPL-3.0-only AND LicenseRef-SCOWL-2020-12-07` | `en_AU/README_en_AU.txt`, `en_AU/extension-makefile.mk`, `en_AU/COPYING_LGPL_v3.txt` |
@@ -142,9 +143,14 @@ payloads reproducibly round-trip to Apache OpenOffice Russian Dictionary 0.6.
 Required upstream and historical modification markings are consolidated in
 `ru_RU/MODIFICATION_NOTICE.txt`.
 
+The `liberation` component mirrors all sixteen locked 1.07.4 font payloads and
+the complete upstream custom terms. Fedora Legal's immutable license-data
+record classifies `LicenseRef-Liberation` as `allowed-fonts`; its reuse terms,
+the versioned source archive, and the signed Debian source record are retained
+as offline attestations. The expression intentionally preserves the complete
+custom terms instead of rewriting them as a standard SPDX font exception.
+
 `ASC.ttf` is intentionally absent because no redistribution grant was found.
-The `liberation` component is intentionally absent because its 1.07.4 custom
-terms, especially Sans Narrow, still require explicit legal review.
 
 Git LFS is forbidden in this repository. Consumers must select an immutable
 tag and verify every payload path, Git blob ID, and SHA-256 before use.
