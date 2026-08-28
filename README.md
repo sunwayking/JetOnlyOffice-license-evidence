@@ -29,6 +29,7 @@ own reviewed SPDX expression and evidence locator:
 | `kk_KZ` | `GPL-2.0-or-later OR LGPL-2.1-or-later OR MPL-1.1` | `kk_KZ/COPYRIGHT` |
 | `lt_LT` | `BSD-3-Clause` | `lt_LT/COPYING` |
 | `mn_MN` | `LPPL-1.3c` | `mn_MN/LICENSE` |
+| `pl_PL` | `(GPL-2.0-only OR LGPL-2.1-only OR MPL-1.1 OR CC-SA-1.0) AND LGPL-2.1-only` | `pl_PL/pl_PL_Polish.txt`, `pl_PL/COPYING_GPLv2`, `pl_PL/COPYING_LGPL_v2.1.txt`, `pl_PL/MPL-1.1.txt`, `pl_PL/CC-SA-1.0.txt`, `pl_PL/debian-copyright-ipolish-20090225.txt`, `pl_PL/sjp-license-page.html` |
 | `pt_BR` | `LGPL-2.1-only AND LGPL-3.0-only` | `pt_BR/README_pt_BR.TXT`, `pt_BR/README_hyph_pt_BR.txt`, `pt_BR/hyphen-pt.spec` |
 | `pt_PT` | `GPL-2.0-only` | `pt_PT/COPYRIGHT`, `pt_PT/COPYING_GPLv2` |
 | `ru_RU` | `LicenseRef-Russian-Dictionaries-Lebedev-1997-2008` | `ru_RU/README_ru_RU.libreoffice.txt`, `ru_RU/COPYRIGHT`, `ru_RU/LICENSERef-Russian-Dictionaries-Lebedev-1997-2008.txt` |
@@ -152,6 +153,16 @@ commit that adds the MIT `LICENSE` (copyright 2021 Alisher Jalolov, the sole
 author named in both payload headers), so the grant covers exactly the locked
 bytes. The author's later GPL v3 switch accompanies the replacement payloads,
 not the locked ones; the reviewed expression is `MIT`.
+
+The `pl_PL` payloads are exact blobs from the locked dictionaries commit and
+belong to the pl.openoffice.org 2008.12.06 standalone UTF-8 release. The
+locked notice pins the Creative Commons branch to CC-SA-1.0 via its `/sa/1.0`
+URL and grants the hyphenation adaptation under LGPL 2.1. The GPL/LGPL/MPL
+versions are pinned by three agreeing sources: the era-matched Debian
+`ipolish 20090225-1` copyright (GPL v2, MPL 1.1, CC-SA 1.0), the
+maintainer's own sjp.pl page (GPL 2, LGPL 2.1, MPL 1.1), and the
+LibreOffice 2026-05-11 README (GPL 2, LGPL 2.1, MPL 1.1). Complete GPL v2,
+LGPL 2.1, MPL 1.1, and CC-SA 1.0 texts are mirrored alongside.
 
 The `ru_RU` snapshot mirrors all five locked payloads. The three current
 payloads are exact blobs from an immutable LibreOffice commit whose README
