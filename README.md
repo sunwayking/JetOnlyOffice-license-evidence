@@ -169,6 +169,8 @@ as offline attestations. The expression intentionally preserves the complete
 custom terms instead of rewriting them as a standard SPDX font exception.
 
 `ASC.ttf` is intentionally absent because no redistribution grant was found.
+Its name table identifies it as ASCW3 by Ascensio System SIA with an
+all-rights-reserved copyright line.
 
 Git LFS is forbidden in this repository. Consumers must select an immutable
 tag and verify every payload path, Git blob ID, and SHA-256 before use.
