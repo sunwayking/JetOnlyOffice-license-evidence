@@ -668,3 +668,61 @@ conditions and is not equivalent to a standard SPDX BSD identifier. Chromium
 independently identifies the OpenOffice source and reproduces the complete
 license and package README. `MODIFICATION_NOTICE.txt` satisfies the license's
 requirement that modified versions be clearly marked.
+
+## uz_Cyrl_UZ
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`; imported by ONLYOFFICE in
+  commit `214fddb29680161b244fa8c1ea0ce1138b05a005` (2022-01-20, PR #43).
+- Author's repository: `u2b3k/uz-hunspell`. The locked payloads are
+  byte-identical to the blobs uploaded in commit
+  `9321fd6a874022dc05c49606343854b51b13d5ef` (2020-04-03) and still
+  present, unchanged, in commit `6de653236bf03144ff9803b15a92bd6bde45670b`
+  (2021-10-23), which adds the author's `LICENSE`.
+- License grant: `LICENSE` (MIT), upstream Git blob
+  `3a1f0808576996ab51971ed0a7cbf1f7c38ef6e1`, SHA-256
+  `d7d9e4eccc3f46417c7ed802bc483a999c0cddebf5714320c5ed18b7b6860711`;
+  copyright 2021 Alisher Jalolov, the sole author named in both payload
+  headers.
+- Reviewed SPDX expression: `MIT`.
+- Timing: the ONLYOFFICE import (2022-01-20) falls inside the window in
+  which the upstream repository carried the MIT grant over exactly these
+  payload bytes (2021-10-23 to 2022-08-05). The author replaced the
+  payloads on 2022-08-05 (`bdd8a996db9f323b8f78bc1e4154086ac642f79a`) and
+  later switched the project license to GPL v3 (2025-06-04,
+  `d5b47918cb585617e9e3ab9ea1ef4941b062cc32`); that grant accompanies the
+  replacement payloads, not the locked ones.
+
+| Mirrored payload | Locked blob | SHA-256 |
+| --- | --- | --- |
+| `uz_Cyrl_UZ/uz_Cyrl_UZ.aff` | `d703b933076b1fc91429ecd9eb30cd19d008aee4` | `98436dfb002d54bda88d55101dbcd2204ab1100b2fa84faae97771730eaf10e9` |
+| `uz_Cyrl_UZ/uz_Cyrl_UZ.dic` | `e6de2df3ae0da34edaf91336d9e67dbd4a933a72` | `c353ca4ed8a3ce3783eee3e38013eb00c7748cec1c277544598e62f4dd4e44b9` |
+
+`uz_Cyrl_UZ/verify-transform.ps1` verifies all payload and license digests
+offline, including the author header inside the `.aff` payload.
+
+## uz_Latn_UZ
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`; imported by ONLYOFFICE in
+  commit `214fddb29680161b244fa8c1ea0ce1138b05a005` (2022-01-20, PR #43).
+- Author's repository: `u2b3k/uz-hunspell`. The locked payloads are
+  byte-identical to the blobs uploaded in commit
+  `9321fd6a874022dc05c49606343854b51b13d5ef` (2020-04-03) and still
+  present, unchanged, in commit `6de653236bf03144ff9803b15a92bd6bde45670b`
+  (2021-10-23), which adds the author's `LICENSE`.
+- License grant: `LICENSE` (MIT), upstream Git blob
+  `3a1f0808576996ab51971ed0a7cbf1f7c38ef6e1`, SHA-256
+  `d7d9e4eccc3f46417c7ed802bc483a999c0cddebf5714320c5ed18b7b6860711`.
+- Reviewed SPDX expression: `MIT`.
+- Timing: identical to `uz_Cyrl_UZ`; the MIT grant covered these exact
+  bytes when ONLYOFFICE imported them.
+
+| Mirrored payload | Locked blob | SHA-256 |
+| --- | --- | --- |
+| `uz_Latn_UZ/uz_Latn_UZ.aff` | `8f92f3b5239ceea6aa5f9f4f881c08d66c0cfd11` | `dcd0490994e6ddadb444ec0808e94dbf8038de48b91b57df07af4420916e79c5` |
+| `uz_Latn_UZ/uz_Latn_UZ.dic` | `2d94e8c030bdf2328d9a426472e7cccdbf245d5f` | `0e90dfabe5366c92740dda9f80400bfc3c6c721404ac9662214bbc9102d9d247` |
+
+`uz_Latn_UZ/verify-transform.ps1` verifies all payload and license digests
+offline, including the author header inside the `.aff` payload.
+
