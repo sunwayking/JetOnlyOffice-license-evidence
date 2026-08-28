@@ -30,6 +30,7 @@ own reviewed SPDX expression and evidence locator:
 | `lt_LT` | `BSD-3-Clause` | `lt_LT/COPYING` |
 | `mn_MN` | `LPPL-1.3c` | `mn_MN/LICENSE` |
 | `pl_PL` | `(GPL-2.0-only OR LGPL-2.1-only OR MPL-1.1 OR CC-SA-1.0) AND LGPL-2.1-only` | `pl_PL/pl_PL_Polish.txt`, `pl_PL/COPYING_GPLv2`, `pl_PL/COPYING_LGPL_v2.1.txt`, `pl_PL/MPL-1.1.txt`, `pl_PL/CC-SA-1.0.txt`, `pl_PL/debian-copyright-ipolish-20090225.txt`, `pl_PL/sjp-license-page.html` |
+| `python` | `PSF-2.0 AND MIT AND Apache-2.0 AND MPL-2.0 AND LGPL-2.1-only AND BSD-3-Clause AND BSD-2-Clause AND ISC AND (BSD-2-Clause OR Apache-2.0) AND OpenSSL AND Zlib AND bzip2-1.0.6 AND LicenseRef-Public-Domain` | `python/PSF-LICENSE.txt`, `python/pip-20.3.4-MIT.txt`, `python/Apache-2.0.txt`, `python/MPL-2.0.txt`, `python/chardet-3.0.4-LGPL.txt`, `python/colorama-0.4.4-BSD3.txt`, `python/pygments-2.12.0-BSD2.txt`, `python/progress-1.5-ISC.txt`, `python/packaging-20.8-LICENSE.BSD.txt`, `python/packaging-20.8-LICENSE.APACHE.txt`, `python/OpenSSL-1.1.1j-LICENSE.txt`, `python/zlib-1.2.12-LICENSE.txt`, `python/bzip2-1.0.6-LICENSE.txt`, `python/SQLite-3.19.3-PublicDomain.txt`, `python/xz-5.2.4-COPYING.txt` |
 | `pt_BR` | `LGPL-2.1-only AND LGPL-3.0-only` | `pt_BR/README_pt_BR.TXT`, `pt_BR/README_hyph_pt_BR.txt`, `pt_BR/hyphen-pt.spec` |
 | `pt_PT` | `GPL-2.0-only` | `pt_PT/COPYRIGHT`, `pt_PT/COPYING_GPLv2` |
 | `ru_RU` | `LicenseRef-Russian-Dictionaries-Lebedev-1997-2008` | `ru_RU/README_ru_RU.libreoffice.txt`, `ru_RU/COPYRIGHT`, `ru_RU/LICENSERef-Russian-Dictionaries-Lebedev-1997-2008.txt` |
