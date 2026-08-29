@@ -181,9 +181,13 @@ the versioned source archive, and the signed Debian source record are retained
 as offline attestations. The expression intentionally preserves the complete
 custom terms instead of rewriting them as a standard SPDX font exception.
 
-`ASC.ttf` is intentionally absent because no redistribution grant was found.
-Its name table identifies it as ASCW3 by Ascensio System SIA with an
-all-rights-reserved copyright line.
+`ASC.ttf` was removed from the locked font set because no redistribution
+grant was found: its name table identifies it as ASCW3 by Ascensio System
+SIA with an all-rights-reserved copyright line. The product no longer
+redistributes the font; paragraph marks, tab arrows and check-box glyphs
+are rendered with real Unicode codepoints through the run font and the
+bundled DejaVu Sans fallback (JetOnlyOffice-sdkjs `65cc0c1`,
+JetOnlyOffice-core `d9f5f3f`).
 
 Git LFS is forbidden in this repository. Consumers must select an immutable
 tag and verify every payload path, Git blob ID, and SHA-256 before use.
