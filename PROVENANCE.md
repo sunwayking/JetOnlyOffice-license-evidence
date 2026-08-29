@@ -817,3 +817,38 @@ maintainer's page.
 
 `python/verify-transform.ps1` verifies the tarball and all 23 license
 evidence digests offline.
+
+## qt
+
+- Locked payload source: `ONLYOFFICE/build-tools-data` commit
+  `743e8e55f0431523248d16b7521e01aa11744ffc`; the mirrored 7z is the
+  materialized LFS payload (SHA-256
+  `84181f983a5e76c2f8a63f8bf06d5ce27675f543c45febe014514633a1289f0e`).
+- The bundle carries no license texts of its own; the Qt 5.9.9 source
+  archive (`qt-everywhere-opensource-src-5.9.9.tar.xz`, LFS oid
+  `5ce285209290a157d7f42ec8eb22bf3f1d76f2e03a95fc0b99b553391be01642`)
+  provides the root license files and per-module licenses.
+- Qt open-source options: LGPL v3 / GPL v2 / GPL v3 (qt.io open-source
+  download page). The bundle includes GPLv3-only modules (Charts, Data
+  Visualization, NetworkAuth, VirtualKeyboard), so the conservative
+  reviewed expression treats the Qt payload as `GPL-3.0-only`.
+- Third-party components statically integrated into the payload ELFs
+  (version pinned from binary strings and mirrored Qt attribution
+  records): zlib 1.2.11 (Zlib), libpng 1.6.37 (Libpng AND libpng-2.0),
+  libjpeg 8c (IJG), libtiff 4.1.0 (libtiff), libwebp 1.0.3
+  (BSD-3-Clause), PCRE2 10.32 (BSD-3-Clause with BSD-2-Clause sljit),
+  double-conversion 2.0.1 (BSD-3-Clause), old HarfBuzz (MIT), easing,
+  forkfd, FreeBSD strtoll/strtoull (BSD-3-Clause), RFC6234
+  (BSD-3-Clause), MD4/MD5/SHA-1 (public domain), SHA-3 brg_endian/Keccak
+  (BSD-3-Clause / CC0-1.0).
+- External runtime libraries (ICU, OpenSSL via dlopen, FreeType,
+  fontconfig, xcb, GLib, GStreamer, ALSA, PulseAudio, CUPS, GTK, D-Bus,
+  Wayland, EGL/GL) are not packaged in the 7z; they are host system
+  dependencies audited with the runtime image.
+- Reviewed SPDX expression:
+  `GPL-3.0-only AND MIT AND BSD-3-Clause AND BSD-2-Clause AND Zlib AND
+  Libpng AND libpng-2.0 AND IJG AND libtiff AND CC0-1.0 AND
+  LicenseRef-Public-Domain`.
+
+`qt/verify-transform.ps1` verifies the archive and license text digests
+offline.
