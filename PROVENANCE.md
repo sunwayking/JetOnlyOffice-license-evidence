@@ -726,3 +726,129 @@ offline, including the author header inside the `.aff` payload.
 `uz_Latn_UZ/verify-transform.ps1` verifies all payload and license digests
 offline, including the author header inside the `.aff` payload.
 
+
+## pl_PL
+
+- Locked payload source: `ONLYOFFICE/dictionaries` commit
+  `d3223bbb777883db66ac3cd249f71c6ebdc992c7`; the payloads belong to the
+  pl.openoffice.org 2008.12.06 standalone UTF-8 release of the Polish
+  dictionary family maintained by Marek Futrega. The locked
+  `pl_PL_Polish.txt` is the verbatim 2008.12.06 Polish README.
+- The locked notice grants the spelling payloads under GPL, LGPL, MPL, and
+  Creative Commons ShareAlike with URL
+  `http://creativecommons.org/licenses/sa/1.0`, pinning the CC branch to
+  `CC-SA-1.0`.
+- Version pinning for GPL/LGPL/MPL (three agreeing sources):
+  - Debian `ipolish 20090225-1` debian/copyright (snapshot 2009-02-27,
+    diff SHA-256
+    `cdcd9f3af5c2b4a850667fa8d6f73d35e14ad1f14c59735518ff5db57dca01fc`):
+    GNU GPL version 2, CC ShareAlike version 1.0, MPL version 1.1 (LGPL
+    unversioned). Mirrored as
+    `pl_PL/debian-copyright-ipolish-20090225.txt`; it also carries the
+    complete CC-SA-1.0 and MPL-1.1 legal texts.
+  - The maintainer's own page `https://sjp.pl/sl/en/` (fetched
+    2026-08-28, mirrored as `pl_PL/sjp-license-page.html`): GPL 2,
+    LGPL 2.1, MPL 1.1 (CC BY 4.0 and Apache 2.0 are later additions that
+    postdate the 2008 payloads).
+  - LibreOffice/dictionaries commit
+    `c78220a23be17268eb08040fdeb5f817776d520c` `pl_PL/README_pl_PL.txt`
+    (2026-05-11 release): GPL 2, LGPL 2.1, MPL 1.1.
+- Hyphenation: the locked notice grants the OpenOffice.org adaptation
+  under LGPL 2.1 with the original plhyph.tex 3.0a patterns in the public
+  domain; the plhyph.tex file header confirms that status.
+- Reviewed SPDX expression:
+  `(GPL-2.0-only OR LGPL-2.1-only OR MPL-1.1 OR CC-SA-1.0) AND LGPL-2.1-only`.
+- Complete license texts mirrored: `pl_PL/COPYING_GPLv2` (GPL v2,
+  SHA-256
+  `edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6`),
+  `pl_PL/COPYING_LGPL_v2.1.txt` (LGPL 2.1, SHA-256
+  `dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551`),
+  `pl_PL/MPL-1.1.txt` (SHA-256
+  `e039e3253cafabeea1aeabc4d0d14b28a56c470ecd3394c7f16ff23130c28860`),
+  `pl_PL/CC-SA-1.0.txt` (SHA-256
+  `fae7ba01de33fd09bef880f2265d71690247a024945d474b44a54ec0571a4228`).
+
+| Mirrored payload | Locked blob | SHA-256 |
+| --- | --- | --- |
+| `pl_PL/pl_PL.aff` | `1e7da1091135f8d300ea1e88ab755e7dc2bb92d1` | `70495f9442d6b00f32ac101f4d01c2b058db17f46c6d2e7330d8429e7605e005` |
+| `pl_PL/pl_PL.dic` | `adae9313822056cc50e39081f9132d242e9218ee` | `bd6173146cf54ff4781ee77479902766fe51ce4a1c866d418f4e4636a980359b` |
+| `pl_PL/hyph_pl_PL.dic` | `405853df26758c1ed3fc43ea005a4af0bbe1f7c3` | `3ff33f47958b01a20f1468ee902ca1319a497f9dc79f266e5028e183bac2476a` |
+
+`pl_PL/verify-transform.ps1` verifies every payload and evidence digest
+offline, including the version pins in the Debian copyright and the
+maintainer's page.
+
+## python
+
+- Locked payload source: `ONLYOFFICE/build-tools-data` commit
+  `743e8e55f0431523248d16b7521e01aa11744ffc`; the mirrored tarball is
+  byte-identical (SHA-256
+  `c251fd88959ad83a64711d37d7897d0bf7a3ed272f23b6ef6216e0eed0bf9360`,
+  Git blob `813cf1692862f84d12700661aa8d8de453ba5bc2`).
+- The bundle is the Chromium infra CIPD package
+  `infra/3pp/tools/cpython3/linux-amd64` (patch_version chromium.2) built
+  from python/cpython v3.10.8 with static modules; the ELF binary's
+  DT_NEEDED lists only glibc, and version strings in the binary pin each
+  statically linked library.
+- Top-level inventory: CPython 3.10.8 `PSF-2.0` (LICENSE.txt identical to
+  the v3.10.8 release tag); pip 20.3.4, setuptools 44.1.1, wheel 0.37.1,
+  and the ensurepip bundled wheels pip 22.2.2 and setuptools 63.2.0, all
+  `MIT` with their vendored dependencies.
+- Vendored packages (deduplicated): `MIT` (pip, setuptools, wheel,
+  appdirs, html5lib, pep517, pyparsing, six, toml/tomli, urllib3,
+  platformdirs, rich, zipp, jaraco.*, more-itertools, ordered-set),
+  `Apache-2.0` (CacheControl, distro, msgpack, requests, retrying,
+  tenacity, importlib_metadata, importlib_resources), `MPL-2.0` (certifi),
+  `LGPL-2.1-only` (chardet), `BSD-3-Clause` (colorama, idna, webencodings),
+  `BSD-2-Clause` (pygments), `ISC` (progress, resolvelib),
+  `(BSD-2-Clause OR Apache-2.0)` (packaging). `PSF-2.0` also covers
+  contextlib2, distlib, ipaddress, and typing_extensions.
+- Statically linked libraries inside python3.10: OpenSSL 1.1.1j (OpenSSL
+  license), expat 2.4.9 (MIT), libmpdec 1.70 (BSD-2-Clause), zlib 1.2.12
+  (Zlib), bzip2 1.0.6 (bzip2-1.0.6), XZ/liblzma 5.2.4 (public domain),
+  SQLite 3.19.3 (public domain), libffi (MIT), libedit (BSD-3-Clause),
+  ncurses 6.0 (MIT), libuuid (BSD-3-Clause).
+- Reviewed SPDX expression:
+  `PSF-2.0 AND MIT AND Apache-2.0 AND MPL-2.0 AND LGPL-2.1-only AND
+  BSD-3-Clause AND BSD-2-Clause AND ISC AND (BSD-2-Clause OR Apache-2.0)
+  AND OpenSSL AND Zlib AND bzip2-1.0.6 AND LicenseRef-Public-Domain`.
+- `LicenseRef-Public-Domain` is bound by the SQLite copyright statement
+  and the XZ Utils COPYING text.
+
+`python/verify-transform.ps1` verifies the tarball and all 23 license
+evidence digests offline.
+
+## qt
+
+- Locked payload source: `ONLYOFFICE/build-tools-data` commit
+  `743e8e55f0431523248d16b7521e01aa11744ffc`; the mirrored 7z is the
+  materialized LFS payload (SHA-256
+  `84181f983a5e76c2f8a63f8bf06d5ce27675f543c45febe014514633a1289f0e`).
+- The bundle carries no license texts of its own; the Qt 5.9.9 source
+  archive (`qt-everywhere-opensource-src-5.9.9.tar.xz`, LFS oid
+  `5ce285209290a157d7f42ec8eb22bf3f1d76f2e03a95fc0b99b553391be01642`)
+  provides the root license files and per-module licenses.
+- Qt open-source options: LGPL v3 / GPL v2 / GPL v3 (qt.io open-source
+  download page). The bundle includes GPLv3-only modules (Charts, Data
+  Visualization, NetworkAuth, VirtualKeyboard), so the conservative
+  reviewed expression treats the Qt payload as `GPL-3.0-only`.
+- Third-party components statically integrated into the payload ELFs
+  (version pinned from binary strings and mirrored Qt attribution
+  records): zlib 1.2.11 (Zlib), libpng 1.6.37 (Libpng AND libpng-2.0),
+  libjpeg 8c (IJG), libtiff 4.1.0 (libtiff), libwebp 1.0.3
+  (BSD-3-Clause), PCRE2 10.32 (BSD-3-Clause with BSD-2-Clause sljit),
+  double-conversion 2.0.1 (BSD-3-Clause), old HarfBuzz (MIT), easing,
+  forkfd, FreeBSD strtoll/strtoull (BSD-3-Clause), RFC6234
+  (BSD-3-Clause), MD4/MD5/SHA-1 (public domain), SHA-3 brg_endian/Keccak
+  (BSD-3-Clause / CC0-1.0).
+- External runtime libraries (ICU, OpenSSL via dlopen, FreeType,
+  fontconfig, xcb, GLib, GStreamer, ALSA, PulseAudio, CUPS, GTK, D-Bus,
+  Wayland, EGL/GL) are not packaged in the 7z; they are host system
+  dependencies audited with the runtime image.
+- Reviewed SPDX expression:
+  `GPL-3.0-only AND MIT AND BSD-3-Clause AND BSD-2-Clause AND Zlib AND
+  Libpng AND libpng-2.0 AND IJG AND libtiff AND CC0-1.0 AND
+  LicenseRef-Public-Domain`.
+
+`qt/verify-transform.ps1` verifies the archive and license text digests
+offline.
