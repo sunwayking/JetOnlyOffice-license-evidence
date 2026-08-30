@@ -29,10 +29,10 @@ noble), byte sizes verified on download, SHA-256 computed locally.
 | cpp-13 | 13.3.0-6ubuntu2~24.04.1 | c7535331fbb183c8 | 1042 | GPL-3.0-or-later |
 | cpp-defaults-x86-64-linux-gnu | 4:13.2.0-7ubuntu1 | 85059b30960de358 | 5326 | GPL-2.0-or-later |
 | cpp-defaults | 4:13.2.0-7ubuntu1 | b51f8094760f7b41 | 22442 | GPL-2.0-or-later |
-| gxxxx-13-x86-64-linux-gnu | 13.3.0-6ubuntu2~24.04.1 | 0bd6af6164252d4e | 12161938 | GPL-3.0-or-later |
-| gxxxx-13 | 13.3.0-6ubuntu2~24.04.1 | 0f3ef964b8a91a9c | 16048 | GPL-3.0-or-later |
-| gxxxx-x86-64-linux-gnu | 4:13.2.0-7ubuntu1 | 145b027a542db5b2 | 964 | GPL-2.0-or-later |
-| gxxxx | 4:13.2.0-7ubuntu1 | 800a84b369c64b18 | 1100 | GPL-2.0-or-later |
+| gxx-13-x86-64-linux-gnu | 13.3.0-6ubuntu2~24.04.1 | 0bd6af6164252d4e | 12161938 | GPL-3.0-or-later |
+| gxx-13 | 13.3.0-6ubuntu2~24.04.1 | 0f3ef964b8a91a9c | 16048 | GPL-3.0-or-later |
+| gxx-defaults-x86-64-linux-gnu | 4:13.2.0-7ubuntu1 | 145b027a542db5b2 | 964 | GPL-2.0-or-later |
+| gxx-defaults | 4:13.2.0-7ubuntu1 | 800a84b369c64b18 | 1100 | GPL-2.0-or-later |
 | gcc-13-base | 13.3.0-6ubuntu2~24.04.1 | e859aca26585bb91 | 51616 | GPL-3.0-or-later AND GPL-3.0-or-later WITH GCC-exception-3.1 AND LGPL-2.1-or-later |
 | gcc-13-x86-64-linux-gnu | 13.3.0-6ubuntu2~24.04.1 | a134b0319a82d145 | 21084546 | GPL-3.0-or-later |
 | gcc-13 | 13.3.0-6ubuntu2~24.04.1 | 7438ff160b020a74 | 494262 | GPL-3.0-or-later |
@@ -62,8 +62,8 @@ noble), byte sizes verified on download, SHA-256 computed locally.
 | liblsan0 | 14.2.0-4ubuntu2~24.04.1 | dc0c2a1a053e833b | 1321652 | GPL-3.0-or-later WITH GCC-exception-3.1 |
 | libquadmath0 | 14.2.0-4ubuntu2~24.04.1 | dc8f0ca542e09d66 | 153316 | GPL-3.0-or-later WITH GCC-exception-3.1 AND LGPL-2.1-or-later |
 | libsframe1 | 2.42-4ubuntu2.10 | 72093fb456864db5 | 15724 | GPL-3.0-or-later |
-| libstdcxxxx-13-dev | 13.3.0-6ubuntu2~24.04.1 | ee5633e863e19c33 | 2419834 | GPL-3.0-or-later WITH GCC-exception-3.1 |
-| libstdcxxxx6 | 14.2.0-4ubuntu2~24.04.1 | a51f8de7829211db | 792064 | GPL-3.0-or-later WITH GCC-exception-3.1 |
+| libstdcxx-13-dev | 13.3.0-6ubuntu2~24.04.1 | ee5633e863e19c33 | 2419834 | GPL-3.0-or-later WITH GCC-exception-3.1 |
+| libstdcxx6 | 14.2.0-4ubuntu2~24.04.1 | a51f8de7829211db | 792064 | GPL-3.0-or-later WITH GCC-exception-3.1 |
 | libtsan2 | 14.2.0-4ubuntu2~24.04.1 | 8cbcc9b3ae5ef23b | 2771910 | GPL-3.0-or-later WITH GCC-exception-3.1 |
 | libubsan1 | 14.2.0-4ubuntu2~24.04.1 | a16dea3abe2dcac9 | 1183812 | GPL-3.0-or-later WITH GCC-exception-3.1 |
 | libzstd1 | 1.5.5+dfsg2-2build1.1 | dfcf25061e07aad7 | 299472 | (BSD-3-Clause OR GPL-2.0-only) AND MIT |
